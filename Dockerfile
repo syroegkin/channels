@@ -71,9 +71,13 @@ RUN cmake -DCMAKE_BUILD_TYPE=Release -DSKIP_PACKAGE_DEVELOP=ON -DCMAKE_POLICY_VE
     -S /channels/hub -B /build && make
 
 # hub packages
+# pip install instead of `python3 setup.py install` — the latter doesn't
+# resolve install_requires (requests, beautifulsoup4) in modern setuptools.
+# --break-system-packages needed because Alpine's Python 3.12 is PEP 668
+# externally-managed; this is a container so it's fine.
 ADD hub/channels /channels-packages
 WORKDIR /channels-packages
-RUN python3 setup.py install
+RUN pip3 install --break-system-packages --no-cache-dir .
 
 WORKDIR /channels/hub/bin
 ADD docker/start.sh /start.sh
