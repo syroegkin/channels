@@ -8,6 +8,11 @@ from channels.base import ChannelsError
 from .conftest import FakeSession, FakeResponse, fixture_path
 
 
+# spectrumcomputing channel is deactivated (site is login-walled as of 2026-04).
+# Keep the tests checked in — they'll be useful once the plugin is re-activated.
+pytestmark = pytest.mark.skip(reason="spectrumcomputing channel deactivated")
+
+
 def _read(*parts):
     with open(fixture_path(*parts), "rb") as f:
         return f.read()

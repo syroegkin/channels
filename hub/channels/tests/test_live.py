@@ -80,7 +80,10 @@ def test_fourchan_threads_and_thread():
 
 
 # ---------- spectrumcomputing ----------
+# Deactivated — site went login-walled in 2026-04. Re-enable once the plugin
+# supports authenticated browsing or anonymous access is restored.
 
+@pytest.mark.skip(reason="spectrumcomputing channel deactivated")
 def test_spectrumcomputing_boards():
     ch = SpectrumComputing()
     client = ch.new_client("live")
@@ -97,6 +100,7 @@ def test_spectrumcomputing_boards():
         assert b.id and isinstance(b.id, str)
 
 
+@pytest.mark.skip(reason="spectrumcomputing channel deactivated")
 def test_spectrumcomputing_threads_and_thread():
     ch = SpectrumComputing()
     client = ch.new_client("live")

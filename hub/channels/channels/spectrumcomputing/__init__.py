@@ -272,7 +272,13 @@ class SpectrumComputing(Channel):
             raise PostingError("Cannot post: {0}. Is your credentials valid?".format(r.status_code))
 
 
-CHANNEL_NAME = "spectrumcomputing"
-CHANNEL_CLASS = SpectrumComputing
-CHANNEL_DESCRIPTION = "The community forum for all ZX Spectrum users"
+# Deactivated: spectrumcomputing.co.uk restricted anonymous access in 2026-04
+# ("forums accessible to logged in members only"). Without these exports
+# channels.base.import_modules() skips this module and the hub won't register
+# it. Re-enable by uncommenting the three lines below once the plugin supports
+# authenticated browsing or the site lifts the wall.
+#
+# CHANNEL_NAME = "spectrumcomputing"
+# CHANNEL_CLASS = SpectrumComputing
+# CHANNEL_DESCRIPTION = "The community forum for all ZX Spectrum users"
 
