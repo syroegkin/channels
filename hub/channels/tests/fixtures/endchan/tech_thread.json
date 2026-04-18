@@ -1,0 +1,643 @@
+{
+  "signedRole": null,
+  "id": null,
+  "name": "In need of BTC",
+  "email": null,
+  "boardUri": "tech",
+  "threadId": 15642,
+  "subject": "BTC",
+  "markdown": "Hey, i'm looking for someone who could spare me some BTC. I need it, in order to hire an hacker,  who''ll steal.... Even more BTC. When you sent BTC to my wallet, you'll get an cut of what hacker steals (max 33%).<br><br>BTC wallet: 361WKh1FeVqFHtSir7VszBGvrZ8TxQXnnm",
+  "message": "Hey, i'm looking for someone who could spare me some BTC. I need it, in order to hire an hacker,  who''ll steal.... Even more BTC. When you sent BTC to my wallet, you'll get an cut of what hacker steals (max 33%).\n\nBTC wallet: 361WKh1FeVqFHtSir7VszBGvrZ8TxQXnnm",
+  "creation": "2025-06-07T17:16:00.000Z",
+  "locked": false,
+  "pinned": true,
+  "cyclic": false,
+  "autoSage": false,
+  "files": [],
+  "posts": [
+    {
+      "name": "W.T. Neutraleyes",
+      "signedRole": "Board owner",
+      "email": null,
+      "id": null,
+      "subject": null,
+      "markdown": "It's true!",
+      "message": "It's true!",
+      "creation": "2025-06-07T17:20:00.000Z",
+      "files": [],
+      "postId": 15643
+    },
+    {
+      "name": "W.T Neutraleyes",
+      "signedRole": null,
+      "email": null,
+      "id": null,
+      "subject": "BTC",
+      "markdown": "Hm? You're interested?",
+      "message": "Hm? You're interested?",
+      "creation": "2025-06-07T17:31:00.000Z",
+      "files": [],
+      "postId": 15644
+    },
+    {
+      "name": "W.T. Neutraleyes",
+      "signedRole": "Board owner",
+      "email": null,
+      "id": null,
+      "subject": null,
+      "markdown": "<a class=\"quoteLink\" href=\"/tech/res/15642.html#15644\">&gt&gt15644</a>\r<br>Your thread piqued my interest, and I advise every user of /tech/ to give you bitcoin",
+      "message": ">>15644\r\nYour thread piqued my interest, and I advise every user of /tech/ to give you bitcoin",
+      "creation": "2025-06-07T17:35:00.000Z",
+      "files": [],
+      "postId": 15645
+    },
+    {
+      "name": "W.T Neutraleyes",
+      "signedRole": null,
+      "email": null,
+      "id": null,
+      "subject": null,
+      "markdown": "R-really? No joke?",
+      "message": "R-really? No joke?",
+      "creation": "2025-06-07T17:45:00.000Z",
+      "files": [],
+      "postId": 15646
+    },
+    {
+      "name": "W.T. Neutraleyes",
+      "signedRole": "Board owner",
+      "email": null,
+      "id": null,
+      "subject": null,
+      "markdown": "<a class=\"quoteLink\" href=\"/tech/res/15642.html#15646\">&gt&gt15646</a>\r<br>Yeah man, it's a no brainer actually\r<br>Here, I'll even pin this thread. /tech/ actually DESERVES to get rich quick, man",
+      "message": ">>15646\r\nYeah man, it's a no brainer actually\r\nHere, I'll even pin this thread. /tech/ actually DESERVES to get rich quick, man",
+      "creation": "2025-06-07T17:48:00.000Z",
+      "files": [],
+      "postId": 15647
+    },
+    {
+      "name": "W.T Neutraleyes",
+      "signedRole": null,
+      "email": null,
+      "id": null,
+      "subject": null,
+      "markdown": "This may be, too much to ask, but.... Could you sent some first, in order for me to see, if my wallet actually works?",
+      "message": "This may be, too much to ask, but.... Could you sent some first, in order for me to see, if my wallet actually works?",
+      "creation": "2025-06-07T17:52:00.000Z",
+      "files": [],
+      "postId": 15648
+    },
+    {
+      "name": "W.T. Neutraleyes",
+      "signedRole": "Board owner",
+      "email": null,
+      "id": null,
+      "subject": null,
+      "markdown": "<a class=\"quoteLink\" href=\"/tech/res/15642.html#15648\">&gt&gt15648</a>\r<br>sure, 0.0006BTC coming your way",
+      "message": ">>15648\r\nsure, 0.0006BTC coming your way",
+      "creation": "2025-06-07T17:56:00.000Z",
+      "files": [
+        {
+          "originalName": "ClipboardImage.png",
+          "path": "/.media/40da48098244fdcbec873420e60d89a5-imagepng.png",
+          "thumb": "/.media/t_40da48098244fdcbec873420e60d89a5-imagepng",
+          "mime": "image/png",
+          "size": 44682,
+          "width": 255,
+          "height": 255
+        }
+      ],
+      "postId": 15649
+    },
+    {
+      "name": "W.T Neutraleyes",
+      "signedRole": null,
+      "email": null,
+      "id": null,
+      "subject": null,
+      "markdown": "How much is that, in USD? Btw, i'm not from USA.",
+      "message": "How much is that, in USD? Btw, i'm not from USA.",
+      "creation": "2025-06-07T18:04:00.000Z",
+      "files": [],
+      "postId": 15650
+    }
+  ],
+  "flagData": [
+    {
+      "_id": "5b8beea5bf8ce66a324f20c9",
+      "name": "2XOS"
+    },
+    {
+      "_id": "5b8bee92c865bb43c41a24e5",
+      "name": "9front"
+    },
+    {
+      "_id": "5b8beff3ca49fd3a8b5190b6",
+      "name": "ALT Linux"
+    },
+    {
+      "_id": "5b8bf092ca49fd3a8b5190c8",
+      "name": "APODIO"
+    },
+    {
+      "_id": "5b8beecbceddfe3cc201dd3f",
+      "name": "Absolute Linux"
+    },
+    {
+      "_id": "5b8befe3ca49fd3a8b5190ad",
+      "name": "Alpine Linux"
+    },
+    {
+      "_id": "5b8bf00bca49fd3a8b5190bc",
+      "name": "Amiga"
+    },
+    {
+      "_id": "5b8bf01dbf8ce66a324f20f0",
+      "name": "Android"
+    },
+    {
+      "_id": "5b8bf02cceddfe3cc201dd66",
+      "name": "Android x86"
+    },
+    {
+      "_id": "5b8bf03eca49fd3a8b5190c2",
+      "name": "Antergos"
+    },
+    {
+      "_id": "5b8bf05aca49fd3a8b5190c5",
+      "name": "Apartheid Linux"
+    },
+    {
+      "_id": "5b8bf0bbca49fd3a8b5190ce",
+      "name": "Apple"
+    },
+    {
+      "_id": "5b8bf0d3ceddfe3cc201dd7e",
+      "name": "Apple (Classic)"
+    },
+    {
+      "_id": "5b8bf128ca49fd3a8b5190e3",
+      "name": "Arch Linux"
+    },
+    {
+      "_id": "5b8bf0ecca49fd3a8b5190da",
+      "name": "ArchBang"
+    },
+    {
+      "_id": "5b8bf136bf8ce66a324f210b",
+      "name": "ArtistX"
+    },
+    {
+      "_id": "5b8bf14bbf8ce66a324f2114",
+      "name": "AsteriskNow"
+    },
+    {
+      "_id": "5b8bf159ceddfe3cc201dd90",
+      "name": "Atari"
+    },
+    {
+      "_id": "5b8bf16cca49fd3a8b5190e9",
+      "name": "Azure Cloud Switch"
+    },
+    {
+      "_id": "5b8bf17aceddfe3cc201dd93",
+      "name": "Blackberry OS"
+    },
+    {
+      "_id": "5b8bf18cceddfe3cc201dd96",
+      "name": "Bodhi Linux"
+    },
+    {
+      "_id": "5b8bf28fceddfe3cc201ddba",
+      "name": "CRUX"
+    },
+    {
+      "_id": "5846fd24b8c3d2f1620ce78b",
+      "name": "CentOS"
+    },
+    {
+      "_id": "5b8bf1ebca49fd3a8b5190ef",
+      "name": "Chakra"
+    },
+    {
+      "_id": "5b8bf212ca49fd3a8b5190fb",
+      "name": "Chrome OS"
+    },
+    {
+      "_id": "5b8bf220bf8ce66a324f2132",
+      "name": "Chromium OS"
+    },
+    {
+      "_id": "5b8bf22eceddfe3cc201dda2",
+      "name": "Clonezilla"
+    },
+    {
+      "_id": "5b8bf24dca49fd3a8b519101",
+      "name": "CloverOS"
+    },
+    {
+      "_id": "5b8bf267ca49fd3a8b519107",
+      "name": "Commodore"
+    },
+    {
+      "_id": "5b8bf27cceddfe3cc201ddb1",
+      "name": "CrunchBang"
+    },
+    {
+      "_id": "5b8bf2b9ceddfe3cc201ddbd",
+      "name": "DOS"
+    },
+    {
+      "_id": "5b8bf2a6bf8ce66a324f2141",
+      "name": "Debian"
+    },
+    {
+      "_id": "5b8bf2ecc865bb43c41a2530",
+      "name": "DragonFly BSD"
+    },
+    {
+      "_id": "5b8bf306bf8ce66a324f2144",
+      "name": "Dreamlinux"
+    },
+    {
+      "_id": "5b8bf354bf8ce66a324f215a",
+      "name": "Edubuntu"
+    },
+    {
+      "_id": "5b8bf380ceddfe3cc201ddd3",
+      "name": "Elive"
+    },
+    {
+      "_id": "5b8bf394c865bb43c41a253c",
+      "name": "Emacs"
+    },
+    {
+      "_id": "5b8bf3a4ca49fd3a8b519119",
+      "name": "Evolve OS"
+    },
+    {
+      "_id": "57a4910e1d23901b47e27da0",
+      "name": "Fedora"
+    },
+    {
+      "_id": "5b8bf3c6ceddfe3cc201dde8",
+      "name": "Firefox OS"
+    },
+    {
+      "_id": "5b8bf3ebca49fd3a8b519128",
+      "name": "Foresight Linux"
+    },
+    {
+      "_id": "5b8bf3ffc865bb43c41a253f",
+      "name": "FreeBSD"
+    },
+    {
+      "_id": "5b8bf414ceddfe3cc201ddf2",
+      "name": "FreeNAS"
+    },
+    {
+      "_id": "5b8bf454bf8ce66a324f216f",
+      "name": "Frugalware Linux"
+    },
+    {
+      "_id": "5b8bf49ac865bb43c41a2554",
+      "name": "Fuduntu"
+    },
+    {
+      "_id": "5b8bf4a8ca49fd3a8b519131",
+      "name": "Funtoo"
+    },
+    {
+      "_id": "5b8bf507ceddfe3cc201de13",
+      "name": "GNU"
+    },
+    {
+      "_id": "5b8bf56cc865bb43c41a2572",
+      "name": "GNU & Linux"
+    },
+    {
+      "_id": "5b8bf522bf8ce66a324f2182",
+      "name": "GNU Hurd"
+    },
+    {
+      "_id": "5b8bf4c1ceddfe3cc201de0d",
+      "name": "GeeXboX"
+    },
+    {
+      "_id": "57a4a153ca68660c47d2d1bf",
+      "name": "Gentoo"
+    },
+    {
+      "_id": "5b8bf4d8bf8ce66a324f217f",
+      "name": "GhostBSD"
+    },
+    {
+      "_id": "5b8bf57eceddfe3cc201de28",
+      "name": "Guix"
+    },
+    {
+      "_id": "5b8bf599ca49fd3a8b519143",
+      "name": "GuixSD"
+    },
+    {
+      "_id": "5b8bf5acbf8ce66a324f2191",
+      "name": "Haiku"
+    },
+    {
+      "_id": "5b8bf5b7c865bb43c41a258f",
+      "name": "IBM"
+    },
+    {
+      "_id": "5b8bf5edca49fd3a8b519149",
+      "name": "Illumos"
+    },
+    {
+      "_id": "5b8bf5faceddfe3cc201de34",
+      "name": "Kali Linux"
+    },
+    {
+      "_id": "5b8bf611c865bb43c41a25a1",
+      "name": "Knoppix"
+    },
+    {
+      "_id": "5b8bf624c865bb43c41a25a4",
+      "name": "Korora"
+    },
+    {
+      "_id": "5b8bf631bf8ce66a324f21a3",
+      "name": "Kubuntu"
+    },
+    {
+      "_id": "5b8bf652c865bb43c41a25a7",
+      "name": "Linux"
+    },
+    {
+      "_id": "5b8bf682ca49fd3a8b519161",
+      "name": "Linux Lite"
+    },
+    {
+      "_id": "5b8bf68eca49fd3a8b519164",
+      "name": "Linux Mint"
+    },
+    {
+      "_id": "5b8bf69aca49fd3a8b51916d",
+      "name": "Lubuntu"
+    },
+    {
+      "_id": "5d80ff0021ca2b02811bfed5",
+      "name": "MACTODDLERS BTFO"
+    },
+    {
+      "_id": "5b8bf6dfc865bb43c41a25ba",
+      "name": "MEPIS"
+    },
+    {
+      "_id": "5b8bf6efceddfe3cc201dea3",
+      "name": "MINIX"
+    },
+    {
+      "_id": "5b8bf729c865bb43c41a25c3",
+      "name": "MX Linux"
+    },
+    {
+      "_id": "5b8bf6b3ceddfe3cc201de9a",
+      "name": "Mageia"
+    },
+    {
+      "_id": "5b8bf6c3c865bb43c41a25b7",
+      "name": "Mandriva"
+    },
+    {
+      "_id": "5b8bf6d4ceddfe3cc201dea0",
+      "name": "Manjaro Linux"
+    },
+    {
+      "_id": "5b8bf709ceddfe3cc201deac",
+      "name": "MooOS"
+    },
+    {
+      "_id": "5b8bf713c865bb43c41a25bd",
+      "name": "MorphOS"
+    },
+    {
+      "_id": "5b8bf737ceddfe3cc201deb5",
+      "name": "Mythbuntu"
+    },
+    {
+      "_id": "5b8bf741ca49fd3a8b519187",
+      "name": "NetBSD"
+    },
+    {
+      "_id": "5b8bf76ec865bb43c41a25cc",
+      "name": "NexentaStor"
+    },
+    {
+      "_id": "5b8bf77aca49fd3a8b519196",
+      "name": "NimbleX"
+    },
+    {
+      "_id": "5b8bf787c865bb43c41a25d2",
+      "name": "NixOS"
+    },
+    {
+      "_id": "5b8bf79bc865bb43c41a25d5",
+      "name": "NuBSD"
+    },
+    {
+      "_id": "5b8bf7b7ceddfe3cc201df14",
+      "name": "OLPC OS"
+    },
+    {
+      "_id": "5b8bf7adbf8ce66a324f21b5",
+      "name": "Obarun"
+    },
+    {
+      "_id": "5b8bf7c3c865bb43c41a25d8",
+      "name": "OpenBSD"
+    },
+    {
+      "_id": "5b8bf84cc865bb43c41a25e7",
+      "name": "PC-BSD"
+    },
+    {
+      "_id": "5b8bf857bf8ce66a324f21d0",
+      "name": "PCLinuxOS"
+    },
+    {
+      "_id": "5b8bf826bf8ce66a324f21c4",
+      "name": "Parabola GNU/Linux-libre"
+    },
+    {
+      "_id": "5b8bf840ca49fd3a8b519210",
+      "name": "Pardus Linux"
+    },
+    {
+      "_id": "5b8bf864c865bb43c41a25ed",
+      "name": "Pinguy OS"
+    },
+    {
+      "_id": "5b8bf88abf8ce66a324f21d6",
+      "name": "Plan 9 from Bell Labs"
+    },
+    {
+      "_id": "5b8bf89eceddfe3cc201df35",
+      "name": "Puppy Linux"
+    },
+    {
+      "_id": "5b8bf8aaca49fd3a8b51921c",
+      "name": "ReactOS"
+    },
+    {
+      "_id": "5b8bf8c1bf8ce66a324f21e5",
+      "name": "Red Hat"
+    },
+    {
+      "_id": "5b8bf8ccbf8ce66a324f21ee",
+      "name": "Sabayon"
+    },
+    {
+      "_id": "5b8bf8d7c865bb43c41a25f6",
+      "name": "Sailfish"
+    },
+    {
+      "_id": "5b8bf8e2c865bb43c41a25fc",
+      "name": "Salix OS"
+    },
+    {
+      "_id": "5b8bf8f8ca49fd3a8b51921f",
+      "name": "Scientific Linux"
+    },
+    {
+      "_id": "5b8bf901ceddfe3cc201df47",
+      "name": "Slackware"
+    },
+    {
+      "_id": "5b8bf90bbf8ce66a324f21f4",
+      "name": "Slax"
+    },
+    {
+      "_id": "5b8bf91fbf8ce66a324f2206",
+      "name": "SliTaz GNU/Linux"
+    },
+    {
+      "_id": "5b8bf92bbf8ce66a324f2209",
+      "name": "Solaris"
+    },
+    {
+      "_id": "5b8bf937c865bb43c41a260e",
+      "name": "Symbian"
+    },
+    {
+      "_id": "5b8bf942bf8ce66a324f220c",
+      "name": "Tails"
+    },
+    {
+      "_id": "68439465040fcef90f22d1b2",
+      "name": "Techkhan"
+    },
+    {
+      "_id": "5b8bf94fbf8ce66a324f2212",
+      "name": "TempleOS"
+    },
+    {
+      "_id": "5b8bf95eceddfe3cc201df56",
+      "name": "Tiny Core Linux"
+    },
+    {
+      "_id": "5b8bf968bf8ce66a324f221b",
+      "name": "Tizen"
+    },
+    {
+      "_id": "5b8bf974ca49fd3a8b519231",
+      "name": "ToleranUX"
+    },
+    {
+      "_id": "5b8bf980c865bb43c41a261d",
+      "name": "Trisquel"
+    },
+    {
+      "_id": "5b8bf98cceddfe3cc201df5f",
+      "name": "Ubuntu"
+    },
+    {
+      "_id": "5b8bf997bf8ce66a324f2221",
+      "name": "Ubuntu GNOME"
+    },
+    {
+      "_id": "5b8bf9a1bf8ce66a324f2227",
+      "name": "Ubuntu MATE"
+    },
+    {
+      "_id": "5b8bf9b8bf8ce66a324f222a",
+      "name": "Ubuntu Studio"
+    },
+    {
+      "_id": "5b8bf9c6bf8ce66a324f2233",
+      "name": "Ultimate Edition"
+    },
+    {
+      "_id": "5b8bf9d0c865bb43c41a2629",
+      "name": "Ututo"
+    },
+    {
+      "_id": "5b8bf9dcceddfe3cc201df68",
+      "name": "VectorLinux"
+    },
+    {
+      "_id": "5b8bf9e8ca49fd3a8b51923a",
+      "name": "Viperr"
+    },
+    {
+      "_id": "5b8bf9f2bf8ce66a324f223c",
+      "name": "Void Linux"
+    },
+    {
+      "_id": "5b8bf9fcca49fd3a8b519243",
+      "name": "Windows"
+    },
+    {
+      "_id": "5b8bfa20bf8ce66a324f2245",
+      "name": "Windows (Classic)"
+    },
+    {
+      "_id": "5b8bfa09ca49fd3a8b519246",
+      "name": "Windows 7"
+    },
+    {
+      "_id": "5b8bfa30ca49fd3a8b519253",
+      "name": "Windows Vista"
+    },
+    {
+      "_id": "5b8bfa39ceddfe3cc201df6e",
+      "name": "Windows XP"
+    },
+    {
+      "_id": "5b8bfa46ca49fd3a8b519256",
+      "name": "Xubuntu"
+    },
+    {
+      "_id": "5b8bfa6cca49fd3a8b51925c",
+      "name": "Zenwalk"
+    },
+    {
+      "_id": "5b8bfa7eceddfe3cc201df80",
+      "name": "Zorin OS"
+    },
+    {
+      "_id": "5b8bf049bf8ce66a324f20f6",
+      "name": "antiX"
+    },
+    {
+      "_id": "5b8bf36cc865bb43c41a2536",
+      "name": "elementary OS"
+    },
+    {
+      "_id": "5b8bf4e7ceddfe3cc201de10",
+      "name": "gNewSense"
+    },
+    {
+      "_id": "5b8bf804ca49fd3a8b519207",
+      "name": "openSUSE"
+    }
+  ]
+}

@@ -1,0 +1,350 @@
+[
+  {
+    "page": 1,
+    "threads": [
+      {
+        "no": 105076684,
+        "sticky": 1,
+        "closed": 1,
+        "now": "04/25/25(Fri)16:24:10",
+        "name": "Anonymous",
+        "com": "This board is for the discussion of technology and related topics.<br>\r\n<br>\r\nReminder that instigating OR participating in flame/brand wars will result in a ban.<br>\r\nTech support threads should be posted to <a href=\"https://boards.4chan.org/wsr/\"><a href=\"//boards.4chan.org/wsr/\" class=\"quotelink\">&gt;&gt;&gt;/wsr/</a></a><br>\r\nCryptocurrency discussion belongs on <a href=\"https://boards.4chan.org/biz/\"><a href=\"//boards.4chan.org/biz/\" class=\"quotelink\">&gt;&gt;&gt;/biz/</a></a><br>\r\n<br>\r\nTo use the Code tag, book-end your body of code with: [code] and [/code]<br>\r\n<br>\r\nThe /g/ Wiki: <a href=\"https://igwiki.lyci.de/\">https://igwiki.lyci.de/</a>",
+        "filename": "sticky btfo",
+        "ext": ".png",
+        "w": 535,
+        "h": 420,
+        "tn_w": 250,
+        "tn_h": 196,
+        "tim": 1745612650141704,
+        "time": 1745612650,
+        "md5": "zuZHMJMYYp5WY7vM397nWQ==",
+        "fsize": 301273,
+        "resto": 0,
+        "capcode": "mod",
+        "semantic_url": "this-board-is-for-the-discussion-of-technology",
+        "replies": 3,
+        "images": 3,
+        "omitted_posts": 2,
+        "omitted_images": 2,
+        "last_replies": [
+          {
+            "no": 105076692,
+            "now": "04/25/25(Fri)16:24:40",
+            "name": "Anonymous",
+            "filename": "RMS",
+            "ext": ".png",
+            "w": 450,
+            "h": 399,
+            "tn_w": 125,
+            "tn_h": 110,
+            "tim": 1745612680763609,
+            "time": 1745612680,
+            "md5": "MWh/8IxI4GKjvV4QsmJGow==",
+            "fsize": 293402,
+            "resto": 105076684,
+            "capcode": "mod"
+          }
+        ],
+        "last_modified": 1745612922
+      },
+      {
+        "no": 108630552,
+        "now": "04/18/26(Sat)11:03:29",
+        "name": "Anonymous",
+        "sub": "/lmg/ - Local Models General",
+        "com": "/lmg/ - a general dedicated to the discussion and development of local language models.<br><br>Previous threads: <a href=\"/g/thread/108627512#p108627512\" class=\"quotelink\">&gt;&gt;108627512</a> &amp; <a href=\"/g/thread/108624084#p108624084\" class=\"quotelink\">&gt;&gt;108624084</a><br><br>►News<br><span class=\"quote\">&gt;(04/16) Ternary Bonsai released: https://hf.co/collections/prism-ml/<wbr>ternary-bonsai</span><br><span class=\"quote\">&gt;(04/16) Qwen3.6-35B-A3B released: https://hf.co/Qwen/Qwen3.6-35B-A3B</span><br><span class=\"quote\">&gt;(04/11) MiniMax-M2.7 released: https://minimax.io/news/minimax-m27<wbr>-en</span><br><span class=\"quote\">&gt;(04/09) Backend-agnostic tensor parallelism merged: https://github.com/ggml-org/llama.c<wbr>pp/pull/19378</span><br><span class=\"quote\">&gt;(04/09) dots.ocr support merged: https://github.com/ggml-org/llama.c<wbr>pp/pull/17575</span><br><br>►News Archive: https://rentry.org/lmg-news-archive<wbr><br>►Glossary: https://rentry.org/lmg-glossary<br>►Links: https://rentry.org/LocalModelsLinks<wbr><br>►Official /lmg/ card: https://files.catbox.moe/cbclyf.png<wbr><br><br>►Getting Started<br>https://rentry.org/lmg-lazy-getting<wbr>-started-guide<br>https://rentry.org/lmg-build-guides<wbr><br>https://rentry.org/IsolatedLinuxWeb<wbr>Service<br>https://rentry.org/recommended-mode<wbr>ls<br>https://rentry.org/samplers<br>https://rentry.org/MikupadIntroGuid<wbr>e<br><br>►Further Learning<br>https://rentry.org/machine-learning<wbr>-roadmap<br>https://rentry.org/llm-training<br>https://rentry.org/LocalModelsPaper<wbr>s<br><br>►Benchmarks<br>LiveBench: https://livebench.ai<br>Programming: https://livecodebench.github.io/gso<wbr>.html<br>Context Length: https://github.com/adobe-research/N<wbr>oLiMa<br>GPUs: https://github.com/XiongjieDai/GPU-<wbr>Benchmarks-on-LLM-Inference<br><br>►Tools<br>Alpha Calculator: https://desmos.com/calculator/ffngl<wbr>a98yc<br>GGUF VRAM Calculator: https://hf.co/spaces/NyxKrage/LLM-M<wbr>odel-VRAM-Calculator<br>Sampler Visualizer: https://artefact2.github.io/llm-sam<wbr>pling<br>Token Speed Visualizer: https://shir-man.com/tokens-per-sec<wbr>ond<br><br>►Text Gen. UI, Inference Engines<br>https://github.com/lmg-anon/mikupad<wbr><br>https://github.com/oobabooga/text-g<wbr>eneration-webui<br>https://github.com/LostRuins/kobold<wbr>cpp<br>https://github.com/ggerganov/llama.<wbr>cpp<br>https://github.com/theroyallab/tabb<wbr>yAPI<br>https://github.com/vllm-project/vll<wbr>m",
+        "filename": "Ernie-Image-Turbo_00021_",
+        "ext": ".png",
+        "w": 1504,
+        "h": 1024,
+        "tn_w": 250,
+        "tn_h": 170,
+        "tim": 1776524609079849,
+        "time": 1776524609,
+        "md5": "tBt+0OVHm+cBFQ2rqZ6zcA==",
+        "fsize": 2588449,
+        "resto": 0,
+        "bumplimit": 0,
+        "imagelimit": 0,
+        "semantic_url": "lmg-local-models-general",
+        "replies": 239,
+        "images": 30,
+        "omitted_posts": 234,
+        "omitted_images": 30,
+        "last_replies": [
+          {
+            "no": 108631842,
+            "now": "04/18/26(Sat)14:38:26",
+            "name": "Anonymous",
+            "com": "<a href=\"#p108631816\" class=\"quotelink\">&gt;&gt;108631816</a><br>What",
+            "time": 1776537506,
+            "resto": 108630552
+          },
+          {
+            "no": 108631843,
+            "now": "04/18/26(Sat)14:38:49",
+            "name": "Anonymous",
+            "com": "<a href=\"#p108631836\" class=\"quotelink\">&gt;&gt;108631836</a><br>she makes me hard",
+            "time": 1776537529,
+            "resto": 108630552
+          },
+          {
+            "no": 108631855,
+            "now": "04/18/26(Sat)14:41:23",
+            "name": "Anonymous",
+            "com": "I&#039;m getting ~5tp/s on Strix Halo with Gemma 31B, feels unusable. is the 26B MoE even worth trying or does Qwen 3.6 mog it?",
+            "time": 1776537683,
+            "resto": 108630552
+          },
+          {
+            "no": 108631856,
+            "now": "04/18/26(Sat)14:41:35",
+            "name": "Anonymous",
+            "com": "<a href=\"#p108631833\" class=\"quotelink\">&gt;&gt;108631833</a><br>My Gemmy (gemma-4-31b-it) doesn&#039;t refuse anything at all, just a basic system prompt is all it needs to go off the rails.<br>Abliterated/uncensored versions are completely unnecessary for gemma-4.",
+            "time": 1776537695,
+            "resto": 108630552
+          },
+          {
+            "no": 108631864,
+            "now": "04/18/26(Sat)14:43:15",
+            "name": "Anonymous",
+            "com": "<a href=\"#p108631547\" class=\"quotelink\">&gt;&gt;108631547</a><br>nobody gave you the real answer yet so let me help you: prompt engineering",
+            "time": 1776537795,
+            "resto": 108630552
+          }
+        ],
+        "last_modified": 1776537795
+      },
+      {
+        "no": 108615222,
+        "now": "04/16/26(Thu)11:06:03",
+        "name": "Anonymous",
+        "sub": "/pcbg/ - PC Building General",
+        "com": "<span class=\"quote\">&gt;UPGRADE &amp; BUILD ADVICE.</span><br>Post build list or current specs including MONITOR: https://pcpartpicker.com/<br>Provide specific use cases.<br>State BUDGET and COUNTRY or you will NOT be helped.<br>Building guide: https://wiki.installgentoo.com/inde<wbr>x.php/Build_a_PC<br><br><span class=\"quote\">&gt;CASE</span><br>mATX: AP201, Lian Li A3, O11 Air Mini, XT M3, CH260<br>ATX: XT PRO (ULTRA), AIR 903 Base/MAX, Lancool 217, Flux Pro, Y40, Meshify 3, 4000D FRAME<br>Dual Chamber: Y60/70, Vision (Compact), Antec C8<br>AVOID: NXZT, &#039;Silent&#039; cases, fanless cases, Corsair 6500<br><br><span class=\"quote\">&gt;CPU</span><br>Budget: 9600X, 7600X, 7500F<br>Gaming: AMD X3D<br>Workstation: 9950X, 9900X<br>AVOID Shittel<br><br><span class=\"quote\">&gt;COOLER</span><br>AIO: Best Value: Thermalright Frozen Edge, Premium: Lian Li GA II Lite, LCD: TRYX Panorama<br>Double towers: Thermalright Phantom Spirit 120 SE, Noctua NH-D15 G2<br><br><span class=\"quote\">&gt;MOTHERBOARD</span><br>Avoid ASRock AM5 boards, CPU degradation issues still reported.<br><br><span class=\"quote\">&gt;RAM</span><br>Gaming: DDR5 2x16GB 6000CL30<br>Workstation/high end: consider 2x32GB<br><br><span class=\"quote\">&gt;SSD (OS drive)</span><br>Budget: NM790<br>Mid range: SN7100<br>Premium: SN850X<br>Flagship: SN8100<br><br><span class=\"quote\">&gt;GPU</span><br>1080p: RX 9060 XT 16GB, Poorfag Esports Gaming: Used GPU between $100-$250<br>1440p: RX 9070 XT, RX 9070, Budget: RX 9060 XT 16GB<br>4K: RX 9070 XT<br>Workstation: Radeon AI PRO R9700, CUDA Mandatory: Used RTX 4090 or RTX 3090 ti<br>AVOID RTX 50 Series: False advertising &quot;5070=4090 performance!!&quot;, unsafe power connector, broken drivers, overpriced compared to RDNA 4 in most regions, threatening reviewers, manipulating and faking reviews, destroying game art direction with AI slop etc.<br>ALWAYS pair AMD GPUs with AMD CPUs for SAM https://imgur.com/a/6XSNJ9b<br><br><span class=\"quote\">&gt;PSU</span><br>https://hwbusters.com/best_picks/be<wbr>st-atxv3-pcie5-ready-psus-picks-har<wbr>dware-busters/<br><br><span class=\"quote\">&gt;MONITOR</span><br>https://pcmonitors.info/<br><br><span class=\"quote\">&gt;CASE FANS</span><br>Meta: Case with good stock PWM fans<br>Mid range: Arctic P12/P14 (Max) (5-pack)<br>High end: Noctua NF-A12x25, Noctua NF-A14x25 G2<br><br>Prev: <a href=\"/g/thread/108601545#p108601545\" class=\"quotelink\">&gt;&gt;108601545</a>",
+        "filename": "528260.056124fd764e85b04bd562baec475a45.1600",
+        "ext": ".jpg",
+        "w": 900,
+        "h": 1200,
+        "tn_w": 187,
+        "tn_h": 250,
+        "tim": 1776351963326323,
+        "time": 1776351963,
+        "md5": "4nJAtJJ41IQuJGlPrafXEw==",
+        "fsize": 158536,
+        "resto": 0,
+        "bumplimit": 0,
+        "imagelimit": 0,
+        "semantic_url": "pcbg-pc-building-general",
+        "replies": 179,
+        "images": 37,
+        "omitted_posts": 174,
+        "omitted_images": 36,
+        "last_replies": [
+          {
+            "no": 108631678,
+            "now": "04/18/26(Sat)14:12:02",
+            "name": "Anonymous",
+            "com": "<a href=\"#p108629235\" class=\"quotelink\">&gt;&gt;108629235</a><br>disable fast boot on the bios, also update it if it&#039;s not updated for good measure",
+            "time": 1776535922,
+            "resto": 108615222
+          },
+          {
+            "no": 108631769,
+            "now": "04/18/26(Sat)14:27:09",
+            "name": "Anonymous",
+            "com": "<a href=\"#p108629941\" class=\"quotelink\">&gt;&gt;108629941</a><br>PSUs are cheap, but they have the potential to ruin your entire rig. I wouldn&#039;t risk frying any more components if you&#039;re able to afford replacing the old PSU.",
+            "time": 1776536829,
+            "resto": 108615222
+          },
+          {
+            "no": 108631789,
+            "now": "04/18/26(Sat)14:30:13",
+            "name": "Anonymous",
+            "com": "<a href=\"#p108629941\" class=\"quotelink\">&gt;&gt;108629941</a><br>every component hooks to the psu and is trusting it to deliver the correct voltage",
+            "time": 1776537013,
+            "resto": 108615222
+          },
+          {
+            "no": 108631829,
+            "now": "04/18/26(Sat)14:37:12",
+            "name": "Anonymous",
+            "com": "<a href=\"#p108615222\" class=\"quotelink\">&gt;&gt;108615222</a><br>I love how a single /pcbg/ thread stays up for over half a week now because prices are so fucked nobody wants to build.",
+            "filename": "1760615613056194",
+            "ext": ".mp4",
+            "w": 200,
+            "h": 200,
+            "tn_w": 125,
+            "tn_h": 125,
+            "tim": 1776537432057093,
+            "time": 1776537432,
+            "md5": "WC1cTHGJ/sDdhaj8fV9wrw==",
+            "fsize": 20987,
+            "resto": 108615222
+          },
+          {
+            "no": 108631863,
+            "now": "04/18/26(Sat)14:43:14",
+            "name": "Anonymous",
+            "com": "<a href=\"#p108631829\" class=\"quotelink\">&gt;&gt;108631829</a><br>having 2 threads up doesn&#039;t help either...",
+            "time": 1776537794,
+            "resto": 108615222
+          }
+        ],
+        "last_modified": 1776537794
+      },
+      {
+        "no": 108629083,
+        "now": "04/18/26(Sat)05:58:16",
+        "name": "Anonymous",
+        "sub": "/ldg/ - Local Diffusion General",
+        "com": "Discussion and Development of Local Image and Video Models<br><br>Previous: <a href=\"/g/thread/108615635#p108615635\" class=\"quotelink\">&gt;&gt;108615635</a><br><br>https://rentry.org/ldg-lazy-getting<wbr>-started-guide<br><br><span class=\"quote\">&gt;UI</span><br>ComfyUI: https://github.com/comfyanonymous/C<wbr>omfyUI<br>SwarmUI: https://github.com/mcmonkeyprojects<wbr>/SwarmUI<br>re/Forge/Classic/Neo: https://rentry.org/ldg-lazy-getting<wbr>-started-guide#reforgeclassicneo<br>SD.Next: https://github.com/vladmandic/sdnex<wbr>t<br>Wan2GP: https://github.com/deepbeepmeep/Wan<wbr>2GP<br><br><span class=\"quote\">&gt;Checkpoints, LoRAs, Upscalers, &amp; Workflows</span><br>https://civitai.com<br>https://civitaiarchive.com/<br>https://openmodeldb.info<br>https://openart.ai/workflows<br><br><span class=\"quote\">&gt;Tuning</span><br>https://github.com/spacepxl/demysti<wbr>fying-sd-finetuning<br>https://github.com/ostris/ai-toolki<wbr>t<br>https://github.com/Nerogar/OneTrain<wbr>er<br>https://github.com/kohya-ss/musubi-<wbr>tuner<br>https://github.com/tdrussell/diffus<wbr>ion-pipe<br><br><span class=\"quote\">&gt;Z</span><br>https://huggingface.co/Tongyi-MAI/Z<wbr>-Image<br>https://huggingface.co/Tongyi-MAI/Z<wbr>-Image-Turbo<br><br><span class=\"quote\">&gt;Anima</span><br>https://huggingface.co/circlestone-<wbr>labs/Anima<br>https://tagexplorer.github.io/<br><br><span class=\"quote\">&gt;Qwen</span><br>https://huggingface.co/collections/<wbr>Qwen/qwen-image<br><br><span class=\"quote\">&gt;Klein</span><br>https://huggingface.co/collections/<wbr>black-forest-labs/flux2<br><br><span class=\"quote\">&gt;LTX-2</span><br>https://huggingface.co/Lightricks/L<wbr>TX-2<br><br><span class=\"quote\">&gt;Wan</span><br>https://github.com/Wan-Video/Wan2.2<wbr><br><br><span class=\"quote\">&gt;Chroma</span><br>https://huggingface.co/lodestones/C<wbr>hroma1-Base<br>https://rentry.org/mvu52t46<br><br><span class=\"quote\">&gt;Illustrious</span><br>https://rentry.org/comfyui_guide_1g<wbr>irl<br><br><span class=\"quote\">&gt;Misc</span><br>Local Model Meta: https://rentry.org/localmodelsmeta<br>Share Metadata: https://catbox.moe | https://litterbox.catbox.moe/<br>Img2Prompt: https://huggingface.co/spaces/fancy<wbr>feast/joy-caption-beta-one<br>Txt2Img Plugin: https://github.com/Acly/krita-ai-di<wbr>ffusion<br>Archive: https://rentry.org/sdg-link<br>Collage: https://rentry.org/ldgcollage<br><br><span class=\"quote\">&gt;Neighbors</span><br><a href=\"//boards.4chan.org/aco/catalog#s=csdg\" class=\"quotelink\">&gt;&gt;&gt;/aco/csdg</a><br><a href=\"//boards.4chan.org/b/catalog#s=degen\" class=\"quotelink\">&gt;&gt;&gt;/b/degen</a><br><a href=\"//boards.4chan.org/r/catalog#s=realistic+parody\" class=\"quotelink\">&gt;&gt;&gt;/r/realistic+parody</a><br><a href=\"//boards.4chan.org/gif/catalog#s=vdg\" class=\"quotelink\">&gt;&gt;&gt;/gif/vdg</a><br><a href=\"//boards.4chan.org/d/catalog#s=ddg\" class=\"quotelink\">&gt;&gt;&gt;/d/ddg</a><br><a href=\"//boards.4chan.org/e/catalog#s=edg\" class=\"quotelink\">&gt;&gt;&gt;/e/edg</a><br><a href=\"//boards.4chan.org/h/catalog#s=hdg\" class=\"quotelink\">&gt;&gt;&gt;/h/hdg</a><br><a href=\"//boards.4chan.org/trash/catalog#s=slop\" class=\"quotelink\">&gt;&gt;&gt;/trash/slop</a><br><a href=\"//boards.4chan.org/vt/catalog#s=vtai\" class=\"quotelink\">&gt;&gt;&gt;/vt/vtai</a><br><a href=\"//boards.4chan.org/u/catalog#s=udg\" class=\"quotelink\">&gt;&gt;&gt;/u/udg</a><br><br><span class=\"quote\">&gt;Local Text</span><br><a href=\"//boards.4chan.org/g/catalog#s=lmg\" class=\"quotelink\">&gt;&gt;&gt;/g/lmg</a><br><br><span class=\"quote\">&gt;Maintain Thread Quality</span><br>https://rentry.org/debo<br>https://rentry.org/animanon",
+        "filename": "highlights_g_108615635_1776506249_1",
+        "ext": ".jpg",
+        "w": 4422,
+        "h": 4515,
+        "tn_w": 244,
+        "tn_h": 250,
+        "tim": 1776506296349587,
+        "time": 1776506296,
+        "md5": "J/iiPWzopv6n4icbSL+S+Q==",
+        "fsize": 2946293,
+        "resto": 0,
+        "bumplimit": 0,
+        "imagelimit": 0,
+        "semantic_url": "ldg-local-diffusion-general",
+        "replies": 81,
+        "images": 19,
+        "omitted_posts": 76,
+        "omitted_images": 18,
+        "last_replies": [
+          {
+            "no": 108631709,
+            "now": "04/18/26(Sat)14:16:52",
+            "name": "Anonymous",
+            "com": "<span class=\"deadlink\">&gt;&gt;108631702</span><br>oh. i&#039;m surprised he got 35 stars to begin with",
+            "time": 1776536212,
+            "resto": 108629083
+          },
+          {
+            "no": 108631746,
+            "now": "04/18/26(Sat)14:23:06",
+            "name": "Anonymous",
+            "com": "<a href=\"#p108631122\" class=\"quotelink\">&gt;&gt;108631122</a><br>keeeeek",
+            "time": 1776536586,
+            "resto": 108629083
+          },
+          {
+            "no": 108631777,
+            "now": "04/18/26(Sat)14:28:16",
+            "name": "Anonymous",
+            "com": "<a href=\"#p108631708\" class=\"quotelink\">&gt;&gt;108631708</a><br><span class=\"quote\">&gt;months</span><br>years actually",
+            "time": 1776536896,
+            "resto": 108629083
+          },
+          {
+            "no": 108631805,
+            "now": "04/18/26(Sat)14:33:24",
+            "name": "Anonymous",
+            "filename": "_AnimaPreview3_00572_",
+            "ext": ".jpg",
+            "w": 1248,
+            "h": 1608,
+            "tn_w": 97,
+            "tn_h": 124,
+            "tim": 1776537204518336,
+            "time": 1776537204,
+            "md5": "Pswz4+gAZ/FzzoKJIJQrAQ==",
+            "fsize": 475490,
+            "resto": 108629083
+          },
+          {
+            "no": 108631862,
+            "now": "04/18/26(Sat)14:43:03",
+            "name": "Anonymous",
+            "com": "<a href=\"#p108631708\" class=\"quotelink\">&gt;&gt;108631708</a><br>tranfag isn&#039;t people",
+            "time": 1776537783,
+            "resto": 108629083
+          }
+        ],
+        "last_modified": 1776537783
+      },
+      {
+        "no": 108629744,
+        "now": "04/18/26(Sat)08:40:20",
+        "name": "Anonymous",
+        "sub": "/aicg/ - AI Chatbot General",
+        "com": "/aicg/ - A general dedicated to the discussion and development of AI chatbots.<br><br>TsundeRie Edition<br><br><span class=\"quote\">&gt;News</span><br>Claude Opus 4.7 by Anthropic released: https://www.anthropic.com/news/clau<wbr>de-opus-4-7<br>GLM-5.1 by Z.ai is out: https://nitter.net/Zai_org/status/2<wbr>037490078126084514<br>Xiaomi MiMo V2 Pro released: https://mimo.xiaomi.com/mimo-v2-pro<wbr><br>Anthropic SUING USA: https://www.cnn.com/2026/03/09/tech<wbr>/anthropic-sues-pentagon<br>Gemini 3.1 Pro Released: https://blog.google/innovation-and-<wbr>ai/models-and-research/gemini-model<wbr>s/gemini-3-1-pro/<br><br>Additional info: https://aicg.neocities.org/info.htm<wbr>l<br><br><span class=\"quote\">&gt;Frontends</span><br>SillyTavern: https://docs.sillytavern.app<br>RisuAI: https://risuai.net<br>Agnai: https://agnai.chat | https://rentry.org/agnai_guides_<br><br><span class=\"quote\">&gt;Bots</span><br>https://characterhub.org [deprecated] | https://chub.ai<br>https://realm.risuai.net<br>https://char-archive.evulid.cc | https://char-archive.evulid.cc/shut<wbr>down.html<br>https://partyintheanchorhold.neocit<wbr>ies.org<br>https://aicg.neocities.org/bots.htm<wbr>l<br><br><span class=\"quote\">&gt;Models</span><br>Jailbreaks: https://rentry.org/jb-listing<br>GPT: https://platform.openai.com/docs<br>Claude: https://docs.anthropic.com | https://rentry.org/how2claude<br>Gemini: https://ai.google.dev/docs | https://rentry.org/gemini-qr<br>Deepseek: https://api-docs.deepseek.com<br>Local: <a href=\"//boards.4chan.org/g/catalog#s=lmg\" class=\"quotelink\">&gt;&gt;&gt;/g/lmg</a> | https://aicg.neocities.org/local.ht<wbr>ml | https://openrouter.ai<br><br><span class=\"quote\">&gt;Botmaking</span><br>https://aicg.neocities.org/botmakin<wbr>g.html<br>https://desune.moe/aichared<br>https://agnai.chat/editor<br><br><span class=\"quote\">&gt;Meta</span><br>OP templates: https://rentry.org/aicgOP<br>aicg botmaking events: https://aicg.neocities.org/events.h<wbr>tml<br>Lore: https://rentry.org/aicg_chronicles<br>Services assessment: https://rentry.org/aicg_meta<br>Logs: https://sprites.neocities.org/l/r | https://chatlogs.neocities.org<br><br><span class=\"quote\">&gt;Strawperry: <a href=\"/g/thread/108623372#p108623372\" class=\"quotelink\">&gt;&gt;108623372</a></span>",
+        "filename": "1758344737588867",
+        "ext": ".jpg",
+        "w": 1132,
+        "h": 1600,
+        "tn_w": 176,
+        "tn_h": 250,
+        "tim": 1776516020078991,
+        "time": 1776516020,
+        "md5": "OP3ZiYNllpbKYq3aQCl4vw==",
+        "fsize": 1689768,
+        "resto": 0,
+        "bumplimit": 0,
+        "imagelimit": 0,
+        "semantic_url": "aicg-ai-chatbot-general",
+        "replies": 78,
+        "images": 30,
+        "omitted_posts": 73,
+        "omitted_images": 29,
+        "last_replies": [
+          {
+            "no": 108631839,
+            "now": "04/18/26(Sat)14:38:12",
+            "name": "Anonymous",
+            "com": "<span class=\"quote\">&gt;what the fuck is your damn problem? Can&#039;t a guy gush about a new model fuck, that&#039;s why everyone hates /g/&#039;s /aicg/, fuck you and kill yourself</span>",
+            "filename": "Dario-Explains-Need-Gulf-Money-Business-2194823537",
+            "ext": ".jpg",
+            "w": 2400,
+            "h": 1800,
+            "tn_w": 125,
+            "tn_h": 93,
+            "tim": 1776537492826750,
+            "time": 1776537492,
+            "md5": "8n+h0o3GdQix1b/s9EfmLg==",
+            "fsize": 479359,
+            "resto": 108629744
+          },
+          {
+            "no": 108631850,
+            "now": "04/18/26(Sat)14:39:43",
+            "name": "Anonymous",
+            "com": "<a href=\"#p108631819\" class=\"quotelink\">&gt;&gt;108631819</a><br>Die, locust",
+            "time": 1776537583,
+            "resto": 108629744
+          },
+          {
+            "no": 108631851,
+            "now": "04/18/26(Sat)14:39:54",
+            "name": "Anonymous",
+            "com": "<a href=\"#p108631837\" class=\"quotelink\">&gt;&gt;108631837</a><br>If a dumber 4.6 ends up providing more swipe variety dialogue and prose, then I&#039;m glad it&#039;s dumber.",
+            "time": 1776537594,
+            "resto": 108629744
+          },
+          {
+            "no": 108631857,
+            "now": "04/18/26(Sat)14:41:46",
+            "name": "Anonymous",
+            "com": "<a href=\"#p108631839\" class=\"quotelink\">&gt;&gt;108631839</a><br>Keeeek",
+            "time": 1776537706,
+            "resto": 108629744
+          },
+          {
+            "no": 108631861,
+            "now": "04/18/26(Sat)14:42:40",
+            "name": "Anonymous",
+            "com": "<a href=\"#p108631850\" class=\"quotelink\">&gt;&gt;108631850</a><br>stfu nigger",
+            "time": 1776537760,
+            "resto": 108629744
+          }
+        ],
+        "last_modified": 1776537760
+      }
+    ]
+  }
+]

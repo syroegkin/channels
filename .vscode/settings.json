@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "zxgui.h": "c",
+    "scenes.h": "c",
+    "system.h": "c",
+    "channels.h": "c"
+  }
+}

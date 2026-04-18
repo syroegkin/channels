@@ -1,0 +1,309 @@
+{
+  "boards": [
+    {
+      "board": "3",
+      "title": "3DCG",
+      "ws_board": 1,
+      "per_page": 15,
+      "pages": 10,
+      "max_filesize": 4194304,
+      "max_webm_filesize": 4194304,
+      "max_comment_chars": 2000,
+      "max_webm_duration": 120,
+      "bump_limit": 310,
+      "image_limit": 150,
+      "cooldowns": {
+        "threads": 600,
+        "replies": 60,
+        "images": 60
+      },
+      "meta_description": "&quot;/3/ - 3DCG&quot; is 4chan's board for 3D modeling and imagery.",
+      "is_archived": 1
+    },
+    {
+      "board": "a",
+      "title": "Anime & Manga",
+      "ws_board": 1,
+      "per_page": 15,
+      "pages": 10,
+      "max_filesize": 4194304,
+      "max_webm_filesize": 4194304,
+      "max_comment_chars": 2000,
+      "max_webm_duration": 120,
+      "bump_limit": 500,
+      "image_limit": 300,
+      "cooldowns": {
+        "threads": 600,
+        "replies": 60,
+        "images": 60
+      },
+      "meta_description": "&quot;/a/ - Anime &amp; Manga&quot; is 4chan's imageboard dedicated to the discussion of Japanese animation and manga.",
+      "spoilers": 1,
+      "custom_spoilers": 1,
+      "is_archived": 1
+    },
+    {
+      "board": "aco",
+      "title": "Adult Cartoons",
+      "ws_board": 0,
+      "per_page": 15,
+      "pages": 10,
+      "max_filesize": 4194304,
+      "max_webm_filesize": 4194304,
+      "max_comment_chars": 2000,
+      "max_webm_duration": 120,
+      "bump_limit": 300,
+      "image_limit": 300,
+      "cooldowns": {
+        "threads": 600,
+        "replies": 60,
+        "images": 30
+      },
+      "meta_description": "&quot;/aco/ - Adult Cartoons&quot; is 4chan's imageboard for posting western-styled adult cartoon artwork.",
+      "is_archived": 1
+    },
+    {
+      "board": "adv",
+      "title": "Advice",
+      "ws_board": 1,
+      "per_page": 15,
+      "pages": 10,
+      "max_filesize": 4194304,
+      "max_webm_filesize": 4194304,
+      "max_comment_chars": 2000,
+      "max_webm_duration": 120,
+      "bump_limit": 310,
+      "image_limit": 150,
+      "cooldowns": {
+        "threads": 600,
+        "replies": 60,
+        "images": 60
+      },
+      "meta_description": "&quot;/adv/ - Advice&quot; is 4chan's board for giving and receiving advice. ",
+      "is_archived": 1
+    },
+    {
+      "board": "an",
+      "title": "Animals & Nature",
+      "ws_board": 1,
+      "per_page": 15,
+      "pages": 10,
+      "max_filesize": 4194304,
+      "max_webm_filesize": 4194304,
+      "max_comment_chars": 2000,
+      "max_webm_duration": 120,
+      "bump_limit": 310,
+      "image_limit": 150,
+      "cooldowns": {
+        "threads": 600,
+        "replies": 60,
+        "images": 60
+      },
+      "meta_description": "&quot;/an/ - Animals &amp; Nature&quot; is 4chan's imageboard for posting pictures of animals, pets, and nature.",
+      "is_archived": 1
+    },
+    {
+      "board": "b",
+      "title": "Random",
+      "ws_board": 0,
+      "per_page": 15,
+      "pages": 10,
+      "max_filesize": 2097152,
+      "max_webm_filesize": 2097152,
+      "max_comment_chars": 2000,
+      "max_webm_duration": 120,
+      "bump_limit": 300,
+      "image_limit": 150,
+      "cooldowns": {
+        "threads": 90,
+        "replies": 30,
+        "images": 30
+      },
+      "meta_description": "&quot;/b/ - Random&quot; is the birthplace of Anonymous, and where people go to discuss random topics and create memes on 4chan."
+    },
+    {
+      "board": "bant",
+      "title": "International/Random",
+      "ws_board": 0,
+      "per_page": 15,
+      "pages": 10,
+      "max_filesize": 2097152,
+      "max_webm_filesize": 2097152,
+      "max_comment_chars": 2000,
+      "max_webm_duration": 120,
+      "bump_limit": 300,
+      "image_limit": 150,
+      "cooldowns": {
+        "threads": 60,
+        "replies": 15,
+        "images": 15
+      },
+      "meta_description": "&quot;/bant/ - International/Random&quot; is 4chan's international hanging out board, where you can have fun with Anonymous all over the world.",
+      "user_ids": 1,
+      "country_flags": 1
+    },
+    {
+      "board": "biz",
+      "title": "Business & Finance",
+      "ws_board": 1,
+      "per_page": 20,
+      "pages": 10,
+      "max_filesize": 4194304,
+      "max_webm_filesize": 4194304,
+      "max_comment_chars": 2000,
+      "max_webm_duration": 120,
+      "bump_limit": 310,
+      "image_limit": 150,
+      "cooldowns": {
+        "threads": 600,
+        "replies": 60,
+        "images": 60
+      },
+      "meta_description": "&quot;/biz/ - Business &amp; Finance&quot; is 4chan's imageboard for the discussion of business and finance, and cryptocurrencies such as Bitcoin and Dogecoin.",
+      "user_ids": 1,
+      "is_archived": 1
+    },
+    {
+      "board": "c",
+      "title": "Anime/Cute",
+      "ws_board": 1,
+      "per_page": 15,
+      "pages": 10,
+      "max_filesize": 4194304,
+      "max_webm_filesize": 4194304,
+      "max_comment_chars": 2000,
+      "max_webm_duration": 120,
+      "bump_limit": 310,
+      "image_limit": 150,
+      "cooldowns": {
+        "threads": 600,
+        "replies": 60,
+        "images": 60
+      },
+      "meta_description": "&quot;/c/ - Anime/Cute&quot; is 4chan's imageboard for cute and moe anime images.",
+      "is_archived": 1
+    },
+    {
+      "board": "cgl",
+      "title": "Cosplay & EGL",
+      "ws_board": 1,
+      "per_page": 15,
+      "pages": 10,
+      "max_filesize": 4194304,
+      "max_webm_filesize": 4194304,
+      "max_comment_chars": 2000,
+      "max_webm_duration": 120,
+      "bump_limit": 310,
+      "image_limit": 150,
+      "cooldowns": {
+        "threads": 600,
+        "replies": 60,
+        "images": 60
+      },
+      "meta_description": "&quot;/cgl/ - Cosplay &amp; EGL&quot; is 4chan's imageboard for the discussion of cosplay, elegant gothic lolita (EGL), and anime conventions.",
+      "is_archived": 1
+    },
+    {
+      "board": "ck",
+      "title": "Food & Cooking",
+      "ws_board": 1,
+      "per_page": 15,
+      "pages": 10,
+      "max_filesize": 4194304,
+      "max_webm_filesize": 4194304,
+      "max_comment_chars": 2000,
+      "max_webm_duration": 120,
+      "bump_limit": 310,
+      "image_limit": 150,
+      "cooldowns": {
+        "threads": 600,
+        "replies": 60,
+        "images": 60
+      },
+      "meta_description": "&quot;/ck/ - Food &amp; Cooking&quot; is 4chan's imageboard for food pictures and cooking recipes.",
+      "is_archived": 1
+    },
+    {
+      "board": "cm",
+      "title": "Cute/Male",
+      "ws_board": 1,
+      "per_page": 15,
+      "pages": 10,
+      "max_filesize": 4194304,
+      "max_webm_filesize": 4194304,
+      "max_comment_chars": 2000,
+      "max_webm_duration": 120,
+      "bump_limit": 310,
+      "image_limit": 150,
+      "cooldowns": {
+        "threads": 600,
+        "replies": 60,
+        "images": 60
+      },
+      "meta_description": "&quot;/cm/ - Cute/Male&quot; is 4chan's imageboard for posting pictures of cute anime males.",
+      "is_archived": 1
+    },
+    {
+      "board": "co",
+      "title": "Comics & Cartoons",
+      "ws_board": 1,
+      "per_page": 15,
+      "pages": 10,
+      "max_filesize": 4194304,
+      "max_webm_filesize": 4194304,
+      "max_comment_chars": 2000,
+      "max_webm_duration": 120,
+      "bump_limit": 500,
+      "image_limit": 300,
+      "cooldowns": {
+        "threads": 600,
+        "replies": 60,
+        "images": 60
+      },
+      "meta_description": "&quot;/co/ - Comics &amp; Cartoons&quot; is 4chan's imageboard dedicated to the discussion of Western cartoons and comics.",
+      "spoilers": 1,
+      "custom_spoilers": 5,
+      "is_archived": 1
+    },
+    {
+      "board": "d",
+      "title": "Hentai/Alternative",
+      "ws_board": 0,
+      "per_page": 15,
+      "pages": 10,
+      "max_filesize": 4194304,
+      "max_webm_filesize": 4194304,
+      "max_comment_chars": 2000,
+      "max_webm_duration": 120,
+      "bump_limit": 300,
+      "image_limit": 300,
+      "cooldowns": {
+        "threads": 600,
+        "replies": 60,
+        "images": 30
+      },
+      "meta_description": "&quot;/d/ - Hentai/Alternative&quot; is 4chan's imageboard for alternative hentai images.",
+      "is_archived": 1
+    },
+    {
+      "board": "diy",
+      "title": "Do It Yourself",
+      "ws_board": 1,
+      "per_page": 15,
+      "pages": 10,
+      "max_filesize": 4194304,
+      "max_webm_filesize": 4194304,
+      "max_comment_chars": 2000,
+      "max_webm_duration": 120,
+      "bump_limit": 310,
+      "image_limit": 150,
+      "cooldowns": {
+        "threads": 600,
+        "replies": 60,
+        "images": 60
+      },
+      "meta_description": "&quot;/diy/ - Do It Yourself&quot; is 4chan's imageboard for DIY/do it yourself projects, home improvement, and makers.",
+      "is_archived": 1
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "pageCount": 339,
+  "boards": [
+    {
+      "boardUri": "polru",
+      "boardName": "pol - Russian Edition",
+      "boardDescription": "А у нас всё по-прежнему",
+      "uniqueIps": 43,
+      "lastPostId": 849476,
+      "postsPerHour": 23,
+      "tags": [],
+      "inactive": false
+    },
+    {
+      "boardUri": "freekukuku",
+      "boardName": "自由ku岛",
+      "boardDescription": "临时避难所",
+      "uniqueIps": 34,
+      "lastPostId": 25761,
+      "postsPerHour": 4,
+      "tags": [
+        "chan",
+        "kukuku",
+        "refuge"
+      ],
+      "inactive": false
+    },
+    {
+      "boardUri": "bert",
+      "boardName": "ciclismo",
+      "boardDescription": "home of /cyc/",
+      "uniqueIps": 31,
+      "lastPostId": 79916,
+      "postsPerHour": 2,
+      "tags": [
+        "wine tasting",
+        "saddle sniffing",
+        "doping",
+        "islamic cult of remco"
+      ],
+      "inactive": false
+    },
+    {
+      "boardUri": "agatha2",
+      "boardName": "E-Girl Purgatory",
+      "boardDescription": "e-girl gossip & drama",
+      "uniqueIps": 30,
+      "lastPostId": 180872,
+      "postsPerHour": 2,
+      "tags": [
+        "agatha",
+        "ciara",
+        "marky",
+        "orbiting",
+        "3d waifus"
+      ],
+      "inactive": false
+    },
+    {
+      "boardUri": "bb",
+      "boardName": "b+",
+      "boardDescription": "Наркач",
+      "uniqueIps": 21,
+      "lastPostId": 214356,
+      "postsPerHour": 4,
+      "tags": [
+        "russian",
+        "drugs",
+        "medicaments",
+        "psychedelics",
+        "narcotics"
+      ],
+      "inactive": false
+    },
+    {
+      "boardUri": "ausneets",
+      "boardName": "AusNEETs",
+      "boardDescription": "The bored four NEETs",
+      "uniqueIps": 19,
+      "lastPostId": 994486,
+      "postsPerHour": 1,
+      "tags": [],
+      "inactive": false
+    },
+    {
+      "boardUri": "kuzzy",
+      "boardName": "The Kuzzy",
+      "boardDescription": "Anyone can deal with victory. Only the mighty can bear defeat.",
+      "uniqueIps": 14,
+      "lastPostId": 14596,
+      "postsPerHour": 1,
+      "tags": [
+        "soy",
+        "kuz",
+        "kolyma"
+      ],
+      "inactive": false
+    },
+    {
+      "boardUri": "kanojo",
+      "boardName": "彼女",
+      "boardDescription": "Because we know you don't have one.",
+      "uniqueIps": 12,
+      "lastPostId": 183858,
+      "postsPerHour": 11,
+      "tags": [
+        "avatar-fag",
+        "circlejerk",
+        "friend simulator",
+        "off-topic discussion",
+        "conversation"
+      ],
+      "inactive": false
+    },
+    {
+      "boardUri": "rus",
+      "boardName": "Russian - Русскоязычный",
+      "boardDescription": "На дереве почки, под ними грибочки, поставим тут точку или новую строчку?",
+      "uniqueIps": 12,
+      "lastPostId": 116294,
+      "postsPerHour": 6,
+      "tags": [
+        "russian",
+        "random",
+        "русскоязычный",
+        "рандом"
+      ],
+      "inactive": false
+    },
+    {
+      "boardUri": "b",
+      "boardName": "Random",
+      "boardDescription": "Anything posted here are autistic works of fiction, only a fool would take them seriously.",
+      "postsPerHour": 2,
+      "lastPostId": 76941,
+      "uniqueIps": 12,
+      "tags": [],
+      "inactive": true
+    },
+    {
+      "boardUri": "sgp",
+      "boardName": "Shemrefuge",
+      "boardDescription": "Also known as the Ninny.",
+      "uniqueIps": 10,
+      "lastPostId": 3030,
+      "postsPerHour": 4,
+      "tags": [
+        "soy",
+        "soyjak",
+        "random"
+      ],
+      "inactive": false
+    },
+    {
+      "boardUri": "gacha",
+      "boardName": "Товарищеское Издание",
+      "boardDescription": "Gacha Games и общение на любые темы",
+      "uniqueIps": 8,
+      "lastPostId": 16701,
+      "postsPerHour": 0,
+      "tags": [
+        "башня кайфа",
+        "соулслайки",
+        "хардкор",
+        "защита древних",
+        "жены."
+      ],
+      "inactive": false
+    },
+    {
+      "boardUri": "bg",
+      "boardName": "Bonbibonkers General",
+      "boardDescription": "Refuge from a refuge",
+      "uniqueIps": 7,
+      "lastPostId": 5644,
+      "postsPerHour": 0,
+      "tags": [],
+      "inactive": false
+    },
+    {
+      "boardUri": "dota",
+      "boardName": "Dota 2",
+      "boardDescription": "Тред друзей и старых знакомых",
+      "uniqueIps": 6,
+      "lastPostId": 106997,
+      "postsPerHour": 0,
+      "tags": [],
+      "inactive": false
+    },
+    {
+      "boardUri": "lgbt",
+      "boardName": "ЛГБТ",
+      "boardDescription": "борда для переката с /fg/, /ga/ и других нетрадиционных разделов сосача",
+      "uniqueIps": 6,
+      "lastPostId": 16162,
+      "postsPerHour": 0,
+      "tags": [
+        "lesbian",
+        "gay",
+        "bisexual",
+        "transgender",
+        "russian"
+      ],
+      "inactive": false
+    }
+  ],
+  "overboard": "overboard",
+  "sfwOverboard": "overboard_sfw"
+}
