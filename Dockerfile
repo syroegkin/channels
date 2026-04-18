@@ -1,6 +1,6 @@
 FROM alpine:3
 RUN apk update && apk add --no-cache cmake git build-base python3 py3-pip python3-dev py3-setuptools \
-    build-base libxml2 libxml2-dev m4 perl
+    build-base libxml2 libxml2-dev m4 perl gmp-dev
 
 RUN mkdir /channels && mkdir /channels/hub/ && mkdir /channels/tnfsd/  \
     && mkdir /channels/client/ && mkdir /channels/hub/bin && mkdir /channels/hub/bin/cache

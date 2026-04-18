@@ -1,0 +1,148 @@
+name: ci
+
+on:
+  push:
+    branches: [main, master]
+    tags: ["v*.*.*"]
+  pull_request:
+  schedule:
+    # Nightly live-test run to catch upstream API drift or outages.
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+    inputs:
+      run_live:
+        description: "Run live tests too"
+        type: boolean
+        default: false
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  offline:
+    name: offline tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hub/channels
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: hub/channels/requirements-dev.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Run offline tests
+        run: pytest -v --junitxml=test-results/offline.xml
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-offline
+          path: hub/channels/test-results/offline.xml
+
+  live:
+    name: live tests
+    # Runs on scheduled nightlies, pushes to main/master, and manual dispatch
+    # when run_live is checked. Not required for PRs (upstream flakiness would
+    # block contributions) or for docker publish (see docker job).
+    if: >-
+      github.event_name == 'schedule' ||
+      (github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')) ||
+      (github.event_name == 'workflow_dispatch' && inputs.run_live)
+    needs: offline
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hub/channels
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: hub/channels/requirements-dev.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Run live tests
+        run: pytest --live -v --junitxml=test-results/live.xml
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-live
+          path: hub/channels/test-results/live.xml
+
+  docker:
+    # Build on every PR (no push) to catch Dockerfile breakage early.
+    # Build + push to GHCR on main/master pushes and semver tags.
+    # Skipped on the nightly schedule run (that event only exists for live tests).
+    #
+    # Gated on offline tests, NOT on live tests: live depends on third-party
+    # services and a transient outage shouldn't block a release.
+    name: docker build${{ (github.event_name == 'pull_request') && '' || ' + push' }}
+    if: github.event_name != 'schedule'
+    needs: offline
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Lowercase image name
+        # GHCR rejects uppercase characters in image names; owners with mixed
+        # case (e.g. "FooBar/channels") would otherwise fail at push time.
+        # IMAGE is sourced from github.repository — not untrusted input.
+        id: img
+        env:
+          IMAGE: ${{ env.IMAGE_NAME }}
+        run: echo "name=${IMAGE,,}" >> "$GITHUB_OUTPUT"
+
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GHCR
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Compute tags and labels
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ steps.img.outputs.name }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=sha,prefix=sha-
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
