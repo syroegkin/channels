@@ -25,21 +25,25 @@ def pytest_collection_modifyitems(config, items):
             item.add_marker(skip)
 
 
+_UNSET = object()
+
+
 class FakeResponse:
-    def __init__(self, status_code=200, json_body=None, content=None, headers=None):
+    def __init__(self, status_code=200, json_body=_UNSET, content=None, headers=None):
         self.status_code = status_code
-        self._json = json_body
-        if content is None and json_body is not None:
-            content = json.dumps(json_body).encode("utf-8")
+        self._has_json = json_body is not _UNSET
+        self._json = json_body if self._has_json else None
+        if content is None and self._has_json:
+            content = json.dumps(self._json).encode("utf-8")
         elif isinstance(content, str):
             content = content.encode("utf-8")
         self.content = content or b""
         self.headers = headers or {}
 
     def json(self):
-        if self._json is None:
-            return json.loads(self.content.decode("utf-8"))
-        return self._json
+        if self._has_json:
+            return self._json
+        return json.loads(self.content.decode("utf-8"))
 
 
 class FakeSession:

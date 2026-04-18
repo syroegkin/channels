@@ -11,6 +11,7 @@ import pytest
 
 from channels.endchan import EndchanChannel
 from channels.fourchan import FourChanChannel
+from channels.hackernews import HackernewsChannel
 from channels.spectrumcomputing import SpectrumComputing
 
 
@@ -77,6 +78,35 @@ def test_fourchan_threads_and_thread():
     posts = ch.get_thread(client, "g", t.id)
     assert posts, "thread g/{0} returned no posts".format(t.id)
     assert posts[0].id
+
+
+# ---------- hackernews ----------
+
+def test_hackernews_boards():
+    ch = HackernewsChannel()
+    client = ch.new_client("live")
+    boards = ch.get_boards(client, limit=0)
+    assert [b.id for b in boards] == ["top", "new", "best", "ask", "show", "jobs"]
+
+
+def test_hackernews_threads_and_thread():
+    ch = HackernewsChannel()
+    client = ch.new_client("live")
+    # keep the test cheap
+    client.set_option("catalog_size", "5")
+    client.set_option("max_comments", "10")
+
+    threads = ch.get_threads(client, "top")
+    t = _first_or_skip(threads, "threads")
+    assert t.id.isdigit()
+    assert t.title
+    assert t.comment is not None
+
+    posts = ch.get_thread(client, "top", t.id)
+    assert posts, "thread {0} returned no posts".format(t.id)
+    assert posts[0].id == t.id
+    # at least the OP has readable text
+    assert posts[0].comment is not None
 
 
 # ---------- spectrumcomputing ----------

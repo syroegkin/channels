@@ -1,0 +1,19 @@
+{
+  "by": "drasim",
+  "descendants": 11,
+  "id": 47816629,
+  "kids": [
+    47817390,
+    47817913,
+    47818002,
+    47818192,
+    47817724,
+    47818153,
+    47817918
+  ],
+  "score": 34,
+  "time": 1776525879,
+  "title": "Show HN: MDV \u2013 a Markdown superset for docs, dashboards, and slides with data",
+  "type": "story",
+  "url": "https://github.com/drasimwagan/mdv"
+}
