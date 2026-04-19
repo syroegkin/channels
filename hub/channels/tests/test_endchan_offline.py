@@ -1,4 +1,5 @@
 import pytest
+from unidecode import unidecode
 
 from channels.endchan import EndchanChannel
 from channels.base import ChannelsError
@@ -31,8 +32,9 @@ def test_get_boards_parses_fixture(channel, client):
     assert len(boards) == len(body["boards"])
     first = boards[0]
     assert first.id == body["boards"][0]["boardUri"]
-    assert first.title == body["boards"][0]["boardName"]
-    assert first.description == body["boards"][0]["boardDescription"]
+    # Titles/descriptions are transliterated to ASCII for the Spectrum client.
+    assert first.title == unidecode(body["boards"][0]["boardName"])
+    assert first.description == unidecode(body["boards"][0]["boardDescription"])
 
 
 def test_get_boards_respects_limit(channel, client):
