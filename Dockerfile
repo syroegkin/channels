@@ -4,7 +4,7 @@
 # ---------------------------------------------------------------------------
 # z88dk publishes weekly date-tagged images; pin to a specific one for
 # reproducibility. Bump when needed.
-FROM z88dk/z88dk:20260406 AS client-builder
+FROM z88dk/z88dk:2.1 AS client-builder
 ARG CHANNELS_HOST=
 
 # z88dk image is Alpine-based without perl or make; the client Makefile and
