@@ -8,7 +8,7 @@ FROM alpine:3.15 AS build
 
 ARG Z88DK_BEFORE=2022-02-18
 
-RUN apk add --no-cache git build-base make perl gcc g++ libxml2-dev m4 bash ca-certificates
+RUN apk add --no-cache git build-base make perl gcc g++ libxml2-dev m4 bison flex texinfo bash ca-certificates
 
 RUN git clone --recursive https://github.com/z88dk/z88dk.git /z88dk \
     && cd /z88dk \
