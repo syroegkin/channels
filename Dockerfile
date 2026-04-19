@@ -12,25 +12,16 @@ FROM z88dk/z88dk:20260406 AS client-builder
 RUN apk add --no-cache make perl \
     && mkdir -p /usr/local/share && ln -s /opt/z88dk /usr/local/share/z88dk
 
-# IMPORTANT: do NOT build under a path containing the letter 'n'.
-# client/Makefile has `JUST_PRINT := $(findstring n,$(MAKEFLAGS))` — a buggy
-# attempt to detect `make -n` that actually matches ANY 'n' in MAKEFLAGS,
-# including command-line variable overrides. Passing `PROTO_PATH=/channels/proto`
-# matched 'n' in "cha[n]nels" and flipped CC from zcc to gcc, which can't parse
-# z88dk's sccz80 headers.
-#
-# Workaround: use /src so the default `PROTO_PATH = $(ROOT_DIR)/../proto` resolves
-# correctly (/src/client/../proto = /src/proto) with no command-line override.
-RUN mkdir -p /src/tnfsd
-ADD proto /src/proto
-ADD client /src/client
+RUN mkdir -p /channels/tnfsd
+ADD proto /channels/proto
+ADD client /channels/client
 
-WORKDIR /src/client
+WORKDIR /channels/client
 # client/Makefile provides a rule for include/spectranet but not for libs/;
 # submakes (spectranet/socklib) then `cp *.lib libs/` into a missing dir and
 # busybox cp fails with "Is a directory". Create libs/ up front.
 RUN mkdir -p libs && make \
-    && cp boot/boot.zx /src/tnfsd && cp bin/channels /src/tnfsd
+    && cp boot/boot.zx /channels/tnfsd && cp bin/channels /channels/tnfsd
 
 # ---------------------------------------------------------------------------
 # Stage 2: hub + runtime. Pulls the client artifacts from stage 1.
@@ -42,9 +33,8 @@ RUN apk update && apk add --no-cache cmake git build-base python3 py3-pip python
 
 RUN mkdir -p /channels/hub/bin/cache /channels/tnfsd
 
-# Client binaries from stage 1 (built under /src/ — see stage 1 comment)
-COPY --from=client-builder /src/tnfsd/boot.zx   /channels/tnfsd/boot.zx
-COPY --from=client-builder /src/tnfsd/channels  /channels/tnfsd/channels
+COPY --from=client-builder /channels/tnfsd/boot.zx   /channels/tnfsd/boot.zx
+COPY --from=client-builder /channels/tnfsd/channels  /channels/tnfsd/channels
 RUN chmod 0444 -R /channels/tnfsd
 
 ADD proto /channels/proto

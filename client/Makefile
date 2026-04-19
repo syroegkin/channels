@@ -1,6 +1,6 @@
 ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
-JUST_PRINT := $(findstring n,$(MAKEFLAGS))
+JUST_PRINT := $(findstring n,$(firstword $(MAKEFLAGS)))
 TARGET := sccz80
 ARCH := zx
 
