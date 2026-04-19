@@ -8,7 +8,7 @@ FROM alpine:3.15 AS build
 
 ARG Z88DK_BEFORE=2022-02-18
 
-RUN apk add --no-cache git build-base make perl gcc g++ libxml2-dev m4 bison flex ragel texinfo bash ca-certificates
+RUN apk add --no-cache git build-base make perl gcc g++ libxml2-dev m4 bison flex ragel re2c texinfo bash ca-certificates
 
 RUN git clone --recursive https://github.com/z88dk/z88dk.git /z88dk \
     && cd /z88dk \
@@ -31,13 +31,16 @@ FROM alpine:3.15
 RUN apk add --no-cache make perl gcc musl-dev bash
 
 COPY --from=build /usr/local/bin/z88dk-* /usr/local/bin/
+COPY --from=build /usr/local/bin/zcc     /usr/local/bin/zcc
 COPY --from=build /usr/local/share/z88dk /usr/local/share/z88dk
 
-# The shim binaries (`zcc`, `z80asm`, `sccz80` …) are typically symlinks under
-# /usr/local/bin; `make install` should have placed them. Double-check.
-COPY --from=build /usr/local/bin/zcc      /usr/local/bin/zcc
-COPY --from=build /usr/local/bin/z80asm   /usr/local/bin/z80asm
-COPY --from=build /usr/local/bin/sccz80   /usr/local/bin/sccz80
+# The spectranet submake calls `z80asm`, `z80nm`, etc. unprefixed. z88dk's
+# `make install` only places `z88dk-*` — create shim symlinks so those
+# invocations resolve.
+RUN for f in /usr/local/bin/z88dk-*; do \
+        name="${f##*/z88dk-}" ; \
+        ln -sf "$f" "/usr/local/bin/$name" ; \
+    done
 
 ENV ZCCCFG=/usr/local/share/z88dk/lib/config
 ENV PATH="/usr/local/bin:${PATH}"
