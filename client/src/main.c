@@ -7,6 +7,7 @@
 #include "netlog.h"
 #include "heap.h"
 #include "alert.h"
+#include "channels_default_host.h"
 
 long heap = 0;
 uint8_t fake_CRT_FONT_64 = 0;

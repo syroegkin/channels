@@ -4,7 +4,7 @@ JUST_PRINT := $(findstring n,$(firstword $(MAKEFLAGS)))
 TARGET := sccz80
 ARCH := zx
 
-CHANNELS_HOST ?= tnfs://channels.zx.in.net
+CHANNELS_HOST ?=
 
 PROTO_PATH = $(ROOT_DIR)/../proto
 CHANNELS_LIBS = -lgui
@@ -57,9 +57,9 @@ endif
 
 ifneq (,$(JUST_PRINT))
 CFLAGS += -I$(ROOT_DIR)/include -I$(ROOT_DIR)/src -I$(ROOT_DIR)/netlog -I$(PROTO_PATH) -D__FASTCALL__="" \
-	-DCHANNELS_PROTO_CLIENT="1" -DCHANNELS_DEFAULT_HOST='"$(CHANNELS_HOST)"' -D__CALLEE__="" -D__SCCZ80="1" -D__Z80="1" -D__naked="" -D__z88dk_callee="" -D__z88dk_fastcall="" -D__stdc="" -D__preserves_regs="" -D__LIB__="" -D__no_z88dk_declspec="1"
+	-DCHANNELS_PROTO_CLIENT="1" -D__CALLEE__="" -D__SCCZ80="1" -D__Z80="1" -D__naked="" -D__z88dk_callee="" -D__z88dk_fastcall="" -D__stdc="" -D__preserves_regs="" -D__LIB__="" -D__no_z88dk_declspec="1"
 else
-CFLAGS += $(DFLAGS) -I$(ROOT_DIR)/src -O3 -I$(ROOT_DIR)/include -I$(ROOT_DIR)/netlog -I$(PROTO_PATH) -DCHANNELS_PROTO_CLIENT="1" -DCHANNELS_DEFAULT_HOST='"$(CHANNELS_HOST)"'
+CFLAGS += $(DFLAGS) -I$(ROOT_DIR)/src -O3 -I$(ROOT_DIR)/include -I$(ROOT_DIR)/netlog -I$(PROTO_PATH) -DCHANNELS_PROTO_CLIENT="1"
 endif
 
 ifeq ($(DEBUG), 1)
@@ -114,6 +114,11 @@ bin/channels__.bin: $(ARCH_TARGETS) gui-lib bin $(OBJECTS) $(ARCH_OBJECTS)
 bin/channels: $(ARCH_TARGETS) gui-lib bin $(OBJECTS) $(ARCH_OBJECTS)
 	$(CC) $(CHANNELS_CFLAGS_PREFIX) -o $(channels_OUT) $(OBJECTS) $(ARCH_OBJECTS) $(CHANNELS_CFLAGS)
 
+src/main.o: src/channels_default_host.h
+
+src/channels_default_host.h: Makefile
+	@printf '#define CHANNELS_DEFAULT_HOST "%s"\n' '$(CHANNELS_HOST)' > $@
+
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
@@ -148,6 +153,7 @@ clean: gui-lib-clean
 	@rm -f src/*.o
 	@rm -f src/*.o.asm
 	@rm -f src/*.c.sym
+	@rm -f src/channels_default_host.h
 	@rm -rf include/spectranet
 	@rm -f libs/*.lib
 	@rm -f libs/*.a
