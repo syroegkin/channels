@@ -1105,8 +1105,10 @@ static void process_entry(ChannelObject* object)
         if (threads)
         {
             char buf[16];
-            buf[threads->value_size] = 0;
-            memcpy(buf, threads->value, threads->value_size);
+            uint8_t sz = threads->value_size;
+            if (sz >= sizeof(buf)) sz = sizeof(buf) - 1;
+            memcpy(buf, threads->value, sz);
+            buf[sz] = 0;
 
             num_entries_total = atoi(buf);
         }
@@ -1145,16 +1147,22 @@ static void process_entry(ChannelObject* object)
             label_w = SCREEN_WIDTH - 1;
         }
 
+        uint16_t comment_size = comment->value_size;
+        if (comment_size >= SPECTRANET_BLOB_SIZE)
+        {
+            comment_size = SPECTRANET_BLOB_SIZE - 1;
+        }
+
         th->comment_blob_id = allocate_heap_blob();
 
         uint8_t* comment_blob_data = open_heap_blob(th->comment_blob_id);
-        memcpy(comment_blob_data, comment->value, comment->value_size);
-        comment_blob_data[comment->value_size] = 0;
+        memcpy(comment_blob_data, comment->value, comment_size);
+        comment_blob_data[comment_size] = 0;
 
         uint8_t max_height = post_mode ? SCREEN_HEIGHT - 10 : 10;
 
         uint8_t min_height = zxgui_label_text_height(label_w, (char*)comment_blob_data,
-            comment->value_size, max_height);
+            comment_size, max_height);
 
         if (th->height < min_height)
         {
