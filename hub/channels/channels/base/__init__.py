@@ -7,11 +7,28 @@ import json
 from unidecode import unidecode
 
 
+def _ascii(s):
+    # Spectrum font covers ASCII 0x20–0x7F only; non-ASCII bytes would render
+    # as garbage on the client. Transliterate everything user-visible.
+    if s is None:
+        return None
+    return unidecode(s)
+
+
+class _AsciiTextMixin(object):
+    """Auto-transliterate ``title`` and ``comment`` on assignment."""
+
+    def __setattr__(self, name, value):
+        if name in ("title", "comment") and value is not None:
+            value = unidecode(value)
+        object.__setattr__(self, name, value)
+
+
 class ChannelBoard(object):
     def __init__(self, id, title, description):
         self.id = id
-        self.title = title
-        self.description = description
+        self.title = _ascii(title)
+        self.description = _ascii(description)
 
 
 class ChannelAttachment(object):
@@ -19,7 +36,7 @@ class ChannelAttachment(object):
         self.url = url
 
 
-class ChannelThread(object):
+class ChannelThread(_AsciiTextMixin):
     def __init__(self, id):
         self.id = id
         self.title = None
@@ -29,7 +46,7 @@ class ChannelThread(object):
         self.date = 0
 
 
-class ChannelPost(object):
+class ChannelPost(_AsciiTextMixin):
     def __init__(self, id):
         self.id = id
         self.title = None
