@@ -189,7 +189,7 @@ static uint8_t process(
                 {
 
                     {
-                        uint8_t object_buffer[512];
+                        static uint8_t object_buffer[512];
                         ChannelObject* obj = (ChannelObject*)object_buffer;
                         uint8_t res = channel_object_read(obj, sizeof(object_buffer), process_proto->recv_object_size, data);
                         proto_assert_str(res == 0, "Header overrun");
