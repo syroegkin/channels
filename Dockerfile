@@ -17,11 +17,7 @@ ADD proto /channels/proto
 ADD client /channels/client
 
 WORKDIR /channels/client
-# client/Makefile provides a rule for include/spectranet but not for libs/;
-# submakes (spectranet/socklib) then `cp *.lib libs/` into a missing dir and
-# busybox cp fails with "Is a directory". Create libs/ up front.
-RUN mkdir -p libs && make \
-    && cp boot/boot.zx /channels/tnfsd && cp bin/channels /channels/tnfsd
+RUN make && cp boot/boot.zx /channels/tnfsd && cp bin/channels /channels/tnfsd
 
 # ---------------------------------------------------------------------------
 # Stage 2: hub + runtime. Pulls the client artifacts from stage 1.

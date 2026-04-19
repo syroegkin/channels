@@ -80,7 +80,7 @@ GUI_LIB_OBJECTS = $(GUI_LIB_SOURCES:.c=.o)
 
 all: channels
 
-libs/$(LIBS_PREFIX)gui$(LIBS_SUFFIX): $(GUI_LIB_OBJECTS)
+libs/$(LIBS_PREFIX)gui$(LIBS_SUFFIX): $(GUI_LIB_OBJECTS) | libs
 	$(LIB_LD) $(LIB_LDFLAGS) $@ $(GUI_CFLAGS) $(GUI_LIB_OBJECTS)
 
 gui-lib: libs/$(LIBS_PREFIX)gui$(LIBS_SUFFIX)
@@ -91,10 +91,13 @@ gui-lib-clean:
 include/spectranet:
 	@mkdir -p include/spectranet
 
-libs/libsocket_np.lib: include/spectranet
+libs:
+	@mkdir -p libs
+
+libs/libsocket_np.lib: include/spectranet | libs
 	make DESTLIBS=$(ROOT_DIR)/libs DESTINCLUDE=$(ROOT_DIR)/include/spectranet SRCGEN=$(ROOT_DIR)/spectranet/scripts/makesources.pl -C spectranet/socklib nplib install
 
-libs/libspectranet_np.lib: include/spectranet
+libs/libspectranet_np.lib: include/spectranet | libs
 	make DESTLIBS=$(ROOT_DIR)/libs DESTINCLUDE=$(ROOT_DIR)/include/spectranet SRCGEN=$(ROOT_DIR)/spectranet/scripts/makesources.pl -C spectranet/libspectranet nplib install
 
 spectranet-libs: libs/libsocket_np.lib libs/libspectranet_np.lib
