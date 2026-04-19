@@ -7,13 +7,14 @@
 # ---------------------------------------------------------------------------
 ARG Z88DK_IMAGE=ghcr.io/syroegkin/channels-z88dk:2022-02-17
 FROM ${Z88DK_IMAGE} AS client-builder
+ARG CHANNELS_HOST=tnfs://channels.zx.in.net
 
 RUN mkdir -p /channels/tnfsd
 ADD proto /channels/proto
 ADD client /channels/client
 
 WORKDIR /channels/client
-RUN mkdir -p libs && make && cp boot/boot.zx /channels/tnfsd && cp bin/channels /channels/tnfsd
+RUN make CHANNELS_HOST="$CHANNELS_HOST" && cp boot/boot.zx /channels/tnfsd && cp bin/channels /channels/tnfsd
 
 # ---------------------------------------------------------------------------
 # Stage 2: hub + runtime. Pulls the client artifacts from stage 1.

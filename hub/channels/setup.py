@@ -4,6 +4,6 @@ setup(
     name='the-channels',
     version="0.5",
     namespace_packages=['channels'],
-    install_requires=['requests', 'beautifulsoup4'],
+    install_requires=['requests', 'beautifulsoup4', 'unidecode'],
     packages=find_packages(),
 )

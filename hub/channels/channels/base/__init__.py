@@ -4,6 +4,8 @@ import hashlib
 import os
 import json
 
+from unidecode import unidecode
+
 
 class ChannelBoard(object):
     def __init__(self, id, title, description):
@@ -112,6 +114,9 @@ class Channel(object):
         s = s.replace("&amp;", "&")
         s = s.replace("&gt;", ">")
         s = s.replace("&lt;", "<")
+        # Transliterate non-ASCII (Cyrillic, CJK, emoji, ...) to ASCII so the
+        # Spectrum client, whose font only covers 0x20–0x7F, can render it.
+        s = unidecode(s)
         return s
 
     @staticmethod

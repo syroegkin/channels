@@ -67,11 +67,21 @@ static void process_board(ChannelObject* object)
     if (prop && description_)
     {
         uint16_t value_size = sizeof(struct channel_board_info) + description_->value_size + 1;
+        uint16_t display_size = title_ ? title_->value_size : prop->value_size;
+        uint16_t needed = sizeof(struct gui_select_option_t) + display_size + 1 + value_size;
+        if (title_)
+        {
+            value_size += prop->value_size + 1;
+            needed += prop->value_size + 1;
+        }
+        if (scene_objects->board.buffer_offset + needed > SPECTRANET_BLOB_SIZE)
+        {
+            return;
+        }
         uint8_t* new_data;
 
         if (title_)
         {
-            value_size += prop->value_size + 1;
             new_data = zxgui_select_add_option(&scene_objects->board, title_->value, title_->value_size, value_size);
         }
         else

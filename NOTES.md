@@ -1,30 +1,30 @@
-# Reverted session edits + open items
+# Session progress + deferred items
 
-Current state = **pristine repo (client/proto at HEAD)** + these **kept** changes only:
+## Current state (all confirmed working on real hardware)
 
-- `Dockerfile` — pre-session two-stage refactor plus `mkdir -p libs` in stage 1 (the pristine client Makefile doesn't create `libs/` itself). The `FROM` line now points at our **custom z88dk image** (see below).
-- `docker/z88dk.Dockerfile` + `.github/workflows/z88dk-image.yml` — new. Rebuilds z88dk from `master` HEAD on 2022-02-17 (the date the known-working `desertkun/channels-hub:latest` binary was compiled) and publishes to `ghcr.io/<owner>/channels-z88dk:2022-02-17`. Cutoff date can be overridden via workflow_dispatch input.
-- `push.sh` + `.spectrum-ip` — local dev tool: build + extract + ethup-push the client binary to a networked Spectranet.
+- **z88dk toolchain pin** via dedicated image: `ghcr.io/syroegkin/channels-z88dk:2022-02-17`, produced by `.github/workflows/z88dk-image.yml` + `docker/z88dk.Dockerfile`. z88dk built from `master` HEAD on 2022-02-17. Newer z88dk releases produce a broken ZX client — root cause of the UI and connect/recv regressions chased earlier in the session.
+- **`Dockerfile`** — multi-stage; stage 1 pulls the z88dk image above, stage 2 is the hub runtime. No `mkdir -p libs` hack (see Makefile change).
+- **`Makefile` hygiene**
+  - `JUST_PRINT := $(findstring n,$(firstword $(MAKEFLAGS)))` — avoids tripping dry-run mode when a command-line variable value contains the letter 'n'.
+  - `libs:` target with order-only prerequisite on lib-producing rules — clean checkout builds without external `mkdir`.
+- **CHANNELS_HOST bake-in** — `Makefile` `CHANNELS_HOST ?=` var + generated `src/channels_default_host.h`, `main.c` fallback `strcpy` when cartridge mount path is empty, `Dockerfile` `ARG CHANNELS_HOST=tnfs://channels.zx.in.net`, `ci.yml` `build-args`, `push.sh` default `tnfs://104.197.16.212`.
+- **Proto object buffer** — `proto/channels_proto.c`: `uint8_t object_buffer[128]` → `static uint8_t object_buffer[512]` using `sizeof(object_buffer)` instead of the literal. Needed for larger boards/topics objects from the real hub.
+- **Board-count overflow guard** — `client/src/channel_view.c` `process_board`: bail out when `scene_objects->board.buffer_offset + needed > SPECTRANET_BLOB_SIZE`. Without this, the 1024-byte heap blob overflows for channels with many boards (endchan returns ~128), corrupts adjacent Spectranet-paged memory (PROTO_PAGE), and trips a downstream `proto_assert` = red border stripes.
 
-## What the user needs to do
+## Skipped / not needed on this toolchain
 
-1. Commit + push these changes.
-2. GitHub → **Actions → "Build z88dk base image"** → "Run workflow" (manual dispatch). Takes ~8–15 min.
-3. GitHub → **Packages → channels-z88dk** → Package settings → **Change visibility: public** (so `push.sh` on local dev machines can `docker pull` without auth).
-4. `./push.sh <spectrum-ip>` — will now use the published image.
+- **`arch/zx/zxgui_tiles.c` tile rename** — originally added to fix UI garbling on the newer z88dk (20260406). With the Feb-2022 z88dk the UI renders correctly without it. Kept out.
 
-## Deferred — re-add one at a time once the pristine build is confirmed working
+## Deferred — known issues to address later
 
-Keep each change on a branch/commit of its own so we can bisect if regressions return.
+- **thread_view.c clamps** (from the earlier "topics crash" mitigation set): comment-blob size clamp to `SPECTRANET_BLOB_SIZE - 1`, threads-count buffer clamp + null-terminator reorder. Re-evaluate once the actual failure mode is observed on the correct toolchain.
+- **Other user-reported issues** noted post-boards-fix — "still some issues left"; details TBD.
 
-1. **`Makefile` hygiene fixes** (safe; not the regression):
-   - `JUST_PRINT := $(findstring n,$(firstword $(MAKEFLAGS)))` — otherwise any 'n' in any variable override trips dry-run mode.
-   - `libs:` target with order-only prerequisite on lib-producing rules — so `make` works from a clean checkout without the Dockerfile `mkdir -p libs` hack. Reverting the hack in `Dockerfile` becomes trivial once this lands.
+## Tools / dev loop
 
-2. **`client/arch/zx/zxgui_tiles.c` tile rename** (`static uchar tiles[]` inside function → file scope, renamed to `gui_tiles_data`) — only necessary on newer z88dk; may not be needed with the Feb-2022 toolchain. Re-verify before re-adding.
+- `push.sh <spectrum-ip>` — builds the client, extracts `bin/channels__.bin`, ethup-pushes to a networked Spectranet at address 25000. Caches IP in `.spectrum-ip` (gitignored).
+- ethup source: `spectranet/devtools/ethup` (build from the spectrumero/spectranet repo clone next to this one).
 
-3. **CHANNELS_HOST bake-in** (`Makefile` generated header + `main.c` fallback + `Dockerfile` ARG + CI `build-args` + `push.sh` default).
+## netlog caveat
 
-4. **Topics-crash mitigations** (`proto/channels_proto.c` 128 → 512 static buffer, `thread_view.c` comment-blob size clamp, threads-count buffer clamp). Re-verify whether the topics-fetch crash still reproduces against a known-working baseline before re-adding.
-
-5. **netlog debug instrumentation** — stays reverted. Spectranet's `sendto`/`recv` page the W5100 SRAM into slot PAGE_B (0x2000), which overlaps `proto_process_t`; any socket op between accesses to `process_proto->…` reads garbage. If we ever need netlog in the proto hot path, call `setpageb(0xC0)` after each socket call.
+Spectranet's UDP `sendto` and TCP `recv` temporarily page the W5100 SRAM into slot PAGE_B (0x2000), which overlaps `proto_process_t`. Any socket op between accesses to `process_proto->…` reads garbage unless you `setpageb(0xC0)` after each. If netlog is ever re-added to the proto hot path, restore PAGE_B explicitly.

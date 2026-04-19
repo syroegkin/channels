@@ -144,5 +144,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            CHANNELS_HOST=tnfs://channels.zx.in.net
           cache-from: type=gha
           cache-to: type=gha,mode=max

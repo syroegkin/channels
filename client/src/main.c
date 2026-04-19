@@ -7,6 +7,7 @@
 #include "netlog.h"
 #include "heap.h"
 #include "alert.h"
+#include "channels_default_host.h"
 
 long heap = 0;
 uint8_t fake_CRT_FONT_64 = 0;
@@ -29,6 +30,11 @@ void switch_main()
     {
         char mounted_path[64];
         get_default_connect_address(mounted_path);
+
+        if (!strlen(mounted_path) && sizeof(CHANNELS_DEFAULT_HOST) > 1)
+        {
+            strcpy(mounted_path, CHANNELS_DEFAULT_HOST);
+        }
 
         if (strlen(mounted_path))
         {

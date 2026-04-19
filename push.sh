@@ -40,8 +40,14 @@ if [[ ! -x "$ETHUP" ]]; then
     fi
 fi
 
-echo ">> Building client…"
-docker build --target client-builder -t channels-client-test "$HERE" >/dev/null
+BUILD_ARGS=()
+if [[ -n "${CHANNELS_HOST:-}" ]]; then
+    BUILD_ARGS+=( --build-arg "CHANNELS_HOST=$CHANNELS_HOST" )
+    echo ">> Building client (host=$CHANNELS_HOST)…"
+else
+    echo ">> Building client (host from Dockerfile default)…"
+fi
+docker build --target client-builder "${BUILD_ARGS[@]}" -t channels-client-test "$HERE" >/dev/null
 echo ">> Extracting bin/channels__.bin…"
 OUT="$(mktemp --suffix=.bin)"
 trap 'rm -f "$OUT"' EXIT
