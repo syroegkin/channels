@@ -1,0 +1,74 @@
+name: Build z88dk base image
+
+# Builds z88dk from source at the commit that was HEAD on 2022-02-17 (the date
+# of the known-working desertkun/channels-hub binary) and publishes the image
+# to GHCR. Run this manually once; the main CI workflow then pulls the
+# published image instead of rebuilding z88dk every time.
+
+on:
+  workflow_dispatch:
+    inputs:
+      before_date:
+        description: "z88dk cutoff date (YYYY-MM-DD, exclusive). Blank = default 2022-02-18."
+        required: false
+        default: ""
+  push:
+    paths:
+      - '.github/workflows/z88dk-image.yml'
+      - 'docker/z88dk.Dockerfile'
+
+env:
+  REGISTRY: ghcr.io
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: img
+        env:
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          lower=$(printf '%s' "$OWNER" | tr '[:upper:]' '[:lower:]')
+          printf 'name=%s/channels-z88dk\n' "$lower" >> "$GITHUB_OUTPUT"
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ steps.img.outputs.name }}
+          tags: |
+            type=raw,value=2022-02-17
+            type=raw,value=latest
+
+      - id: before
+        env:
+          INPUT_BEFORE: ${{ inputs.before_date }}
+        run: |
+          val="${INPUT_BEFORE:-2022-02-18}"
+          case "$val" in
+            [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]) ;;
+            *) echo "Invalid before_date format: $val" >&2 ; exit 1 ;;
+          esac
+          printf 'value=%s\n' "$val" >> "$GITHUB_OUTPUT"
+
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./docker/z88dk.Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            Z88DK_BEFORE=${{ steps.before.outputs.value }}
+          cache-from: type=gha,scope=z88dk
+          cache-to: type=gha,mode=max,scope=z88dk

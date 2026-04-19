@@ -1,10 +1,8 @@
 ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
-JUST_PRINT := $(findstring n,$(firstword $(MAKEFLAGS)))
+JUST_PRINT := $(findstring n,$(MAKEFLAGS))
 TARGET := sccz80
 ARCH := zx
-
-CHANNELS_HOST ?=
 
 PROTO_PATH = $(ROOT_DIR)/../proto
 CHANNELS_LIBS = -lgui
@@ -82,7 +80,7 @@ GUI_LIB_OBJECTS = $(GUI_LIB_SOURCES:.c=.o)
 
 all: channels
 
-libs/$(LIBS_PREFIX)gui$(LIBS_SUFFIX): $(GUI_LIB_OBJECTS) | libs
+libs/$(LIBS_PREFIX)gui$(LIBS_SUFFIX): $(GUI_LIB_OBJECTS)
 	$(LIB_LD) $(LIB_LDFLAGS) $@ $(GUI_CFLAGS) $(GUI_LIB_OBJECTS)
 
 gui-lib: libs/$(LIBS_PREFIX)gui$(LIBS_SUFFIX)
@@ -93,13 +91,10 @@ gui-lib-clean:
 include/spectranet:
 	@mkdir -p include/spectranet
 
-libs:
-	@mkdir -p libs
-
-libs/libsocket_np.lib: include/spectranet | libs
+libs/libsocket_np.lib: include/spectranet
 	make DESTLIBS=$(ROOT_DIR)/libs DESTINCLUDE=$(ROOT_DIR)/include/spectranet SRCGEN=$(ROOT_DIR)/spectranet/scripts/makesources.pl -C spectranet/socklib nplib install
 
-libs/libspectranet_np.lib: include/spectranet | libs
+libs/libspectranet_np.lib: include/spectranet
 	make DESTLIBS=$(ROOT_DIR)/libs DESTINCLUDE=$(ROOT_DIR)/include/spectranet SRCGEN=$(ROOT_DIR)/spectranet/scripts/makesources.pl -C spectranet/libspectranet nplib install
 
 spectranet-libs: libs/libsocket_np.lib libs/libspectranet_np.lib
@@ -113,11 +108,6 @@ bin/channels__.bin: $(ARCH_TARGETS) gui-lib bin $(OBJECTS) $(ARCH_OBJECTS)
 
 bin/channels: $(ARCH_TARGETS) gui-lib bin $(OBJECTS) $(ARCH_OBJECTS)
 	$(CC) $(CHANNELS_CFLAGS_PREFIX) -o $(channels_OUT) $(OBJECTS) $(ARCH_OBJECTS) $(CHANNELS_CFLAGS)
-
-src/main.o: src/channels_default_host.h
-
-src/channels_default_host.h: Makefile
-	@printf '#define CHANNELS_DEFAULT_HOST "%s"\n' '$(CHANNELS_HOST)' > $@
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
@@ -153,7 +143,6 @@ clean: gui-lib-clean
 	@rm -f src/*.o
 	@rm -f src/*.o.asm
 	@rm -f src/*.c.sym
-	@rm -f src/channels_default_host.h
 	@rm -rf include/spectranet
 	@rm -f libs/*.lib
 	@rm -f libs/*.a

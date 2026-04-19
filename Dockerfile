@@ -1,24 +1,19 @@
 # ---------------------------------------------------------------------------
-# Stage 1: build the ZX Spectrum client using a pre-built z88dk toolchain.
-# Avoids the ~8-minute z88dk-from-source compile on every cold build.
+# Stage 1: build the ZX Spectrum client using our custom z88dk image.
+# The image is produced by .github/workflows/z88dk-image.yml — z88dk compiled
+# from master HEAD on 2022-02-17 (newer z88dk releases produce broken code for
+# this client). The image already has make/perl/gcc on top of z88dk, so no
+# extra apk add is needed.
 # ---------------------------------------------------------------------------
-# z88dk publishes weekly date-tagged images; pin to a specific one for
-# reproducibility. Bump when needed.
-FROM z88dk/z88dk:2.1 AS client-builder
-ARG CHANNELS_HOST=
-
-# z88dk image is Alpine-based without perl or make; the client Makefile and
-# spectranet submake both need them. Also symlink /opt/z88dk to the
-# /usr/local/share/z88dk path the client Makefile hard-codes.
-RUN apk add --no-cache make perl \
-    && mkdir -p /usr/local/share && ln -s /opt/z88dk /usr/local/share/z88dk
+ARG Z88DK_IMAGE=ghcr.io/syroegkin/channels-z88dk:2022-02-17
+FROM ${Z88DK_IMAGE} AS client-builder
 
 RUN mkdir -p /channels/tnfsd
 ADD proto /channels/proto
 ADD client /channels/client
 
 WORKDIR /channels/client
-RUN make CHANNELS_HOST="$CHANNELS_HOST" && cp boot/boot.zx /channels/tnfsd && cp bin/channels /channels/tnfsd
+RUN mkdir -p libs && make && cp boot/boot.zx /channels/tnfsd && cp bin/channels /channels/tnfsd
 
 # ---------------------------------------------------------------------------
 # Stage 2: hub + runtime. Pulls the client artifacts from stage 1.
