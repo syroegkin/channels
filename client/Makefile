@@ -4,6 +4,8 @@ JUST_PRINT := $(findstring n,$(firstword $(MAKEFLAGS)))
 TARGET := sccz80
 ARCH := zx
 
+CHANNELS_HOST ?= tnfs://channels.zx.in.net
+
 PROTO_PATH = $(ROOT_DIR)/../proto
 CHANNELS_LIBS = -lgui
 BIN_NAME = channels__.bin
@@ -55,9 +57,9 @@ endif
 
 ifneq (,$(JUST_PRINT))
 CFLAGS += -I$(ROOT_DIR)/include -I$(ROOT_DIR)/src -I$(ROOT_DIR)/netlog -I$(PROTO_PATH) -D__FASTCALL__="" \
-	-DCHANNELS_PROTO_CLIENT="1" -D__CALLEE__="" -D__SCCZ80="1" -D__Z80="1" -D__naked="" -D__z88dk_callee="" -D__z88dk_fastcall="" -D__stdc="" -D__preserves_regs="" -D__LIB__="" -D__no_z88dk_declspec="1"
+	-DCHANNELS_PROTO_CLIENT="1" -DCHANNELS_DEFAULT_HOST='"$(CHANNELS_HOST)"' -D__CALLEE__="" -D__SCCZ80="1" -D__Z80="1" -D__naked="" -D__z88dk_callee="" -D__z88dk_fastcall="" -D__stdc="" -D__preserves_regs="" -D__LIB__="" -D__no_z88dk_declspec="1"
 else
-CFLAGS += $(DFLAGS) -I$(ROOT_DIR)/src -O3 -I$(ROOT_DIR)/include -I$(ROOT_DIR)/netlog -I$(PROTO_PATH) -DCHANNELS_PROTO_CLIENT="1"
+CFLAGS += $(DFLAGS) -I$(ROOT_DIR)/src -O3 -I$(ROOT_DIR)/include -I$(ROOT_DIR)/netlog -I$(PROTO_PATH) -DCHANNELS_PROTO_CLIENT="1" -DCHANNELS_DEFAULT_HOST='"$(CHANNELS_HOST)"'
 endif
 
 ifeq ($(DEBUG), 1)

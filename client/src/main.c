@@ -30,6 +30,11 @@ void switch_main()
         char mounted_path[64];
         get_default_connect_address(mounted_path);
 
+        if (!strlen(mounted_path) && sizeof(CHANNELS_DEFAULT_HOST) > 1)
+        {
+            strcpy(mounted_path, CHANNELS_DEFAULT_HOST);
+        }
+
         if (strlen(mounted_path))
         {
             if (strncmp(mounted_path, "tnfs://", 7) == 0)
