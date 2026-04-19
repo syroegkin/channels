@@ -189,9 +189,9 @@ static uint8_t process(
                 {
 
                     {
-                        static uint8_t object_buffer[512];
+                        uint8_t object_buffer[128];
                         ChannelObject* obj = (ChannelObject*)object_buffer;
-                        uint8_t res = channel_object_read(obj, sizeof(object_buffer), process_proto->recv_object_size, data);
+                        uint8_t res = channel_object_read(obj, 128, process_proto->recv_object_size, data);
                         proto_assert_str(res == 0, "Header overrun");
                         process_next(process_socket, obj, process_proto->user);
                     }
